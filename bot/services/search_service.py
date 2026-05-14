@@ -1,10 +1,10 @@
 """
 Dori qidiruv pipeline:
 user query → NLP normalize → MongoDB regex + fuzzy → geo filter ($near) → format
+Returns: {"text": str, "image_url": str|None, "display_name": str}
 """
 
 from __future__ import annotations
-from bson import ObjectId
 from difflib import SequenceMatcher
 from loguru import logger
 
@@ -18,7 +18,16 @@ async def search_medicine(
     user_lat: float,
     user_lng: float,
     telegram_id: int,
-) -> str:
+) -> dict:
+    """
+    Returns:
+        {
+            "text": str,        - HTML formatted result
+            "image_url": str|None,
+            "display_name": str,
+            "found": bool
+        }
+    """
     logger.info(f"Qidiruv: '{user_query}' ({user_lat:.4f}, {user_lng:.4f})")
 
     normalized = await nlp_agent.normalize_medicine_name(user_query)
@@ -36,15 +45,22 @@ async def search_medicine(
 
     if not medicines:
         await queries.log_search(telegram_id, user_query, 0)
-        return (
-            f"❓ <b>{user_query}</b> dori topilmadi.\n\n"
-            "Iltimos:\n"
-            "• To'g'ri yozilganini tekshiring\n"
-            "• Generic nomini sinab ko'ring\n"
-            "• Masalan: <i>Paracetamol, Ibuprofen, Amoxicillin</i>"
-        )
+        return {
+            "text": (
+                f"❓ <b>{user_query}</b> dori topilmadi.\n\n"
+                "Iltimos:\n"
+                "• To'g'ri yozilganini tekshiring\n"
+                "• Generic nomini sinab ko'ring\n"
+                "• Masalan: <i>Paracetamol, Ibuprofen, Amoxicillin</i>"
+            ),
+            "image_url": None,
+            "display_name": user_query,
+            "found": False,
+        }
 
     medicine = medicines[0]
+    image_url = medicine.get("image_url")
+
     pharmacies = await queries.find_nearby_pharmacies_with_medicine(
         medicine_id=medicine["_id"],
         user_lat=user_lat,
@@ -54,7 +70,14 @@ async def search_medicine(
     )
 
     await queries.log_search(telegram_id, user_query, len(pharmacies))
-    return await search_agent.format_results(pharmacies, display_name)
+    text = await search_agent.format_results(pharmacies, display_name)
+
+    return {
+        "text": text,
+        "image_url": image_url,
+        "display_name": display_name,
+        "found": True,
+    }
 
 
 async def _fuzzy_search(query: str) -> list[dict]:

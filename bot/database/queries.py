@@ -75,7 +75,7 @@ async def search_medicines_by_name(query: str) -> list[dict]:
             {"generic_name": regex},
             {"synonyms": regex},
         ]},
-        {"_id": 1, "name_uz": 1, "name_ru": 1, "generic_name": 1, "category": 1},
+        {"_id": 1, "name_uz": 1, "name_ru": 1, "generic_name": 1, "category": 1, "image_url": 1},
     ).limit(10)
     return await cursor.to_list(10)
 

@@ -65,7 +65,20 @@ async def handle_medicine_query(message: Message) -> None:
             telegram_id=user.id,
         )
         await searching_msg.delete()
-        await message.answer(result, parse_mode="HTML", reply_markup=search_again_kb())
+
+        # Rasm mavjud bo'lsa — avval yuboramiz (foydalanuvchi dorini taniydi)
+        if result.get("image_url"):
+            try:
+                from aiogram.types import URLInputFile
+                await message.answer_photo(
+                    photo=URLInputFile(result["image_url"]),
+                    caption=f"💊 <b>{result['display_name']}</b>",
+                    parse_mode="HTML",
+                )
+            except Exception as img_err:
+                logger.warning(f"Rasm yuborib bo'lmadi: {img_err}")
+
+        await message.answer(result["text"], parse_mode="HTML", reply_markup=search_again_kb())
     except Exception as e:
         logger.error(f"Qidiruv xatosi [{user.id}]: {e}")
         await searching_msg.delete()
