@@ -1,0 +1,7 @@
+aiogram~=3.13
+motor~=3.6
+anthropic~=0.40
+python-dotenv~=1.0
+pydantic>=2.4.1,<2.10
+pydantic-settings>=2.5.0,<2.8
+loguru~=0.7

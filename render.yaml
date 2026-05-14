@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: dorixona-bot
+    env: python
+    plan: free
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m bot.main
+    healthCheckPath: /health
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: WEBHOOK_HOST
+        sync: false
+      - key: WEBHOOK_SECRET
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: BOT_ENV
+        value: production
+      - key: SEARCH_RADIUS_KM
+        value: "5"
+      - key: MAX_RESULTS
+        value: "10"
