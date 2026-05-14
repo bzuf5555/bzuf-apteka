@@ -56,12 +56,12 @@ async def run_polling() -> None:
     )
     dp = build_dispatcher()
 
-    async def on_startup(_bot: Bot) -> None:
+    async def on_startup(bot: Bot) -> None:
         await _init_db()
-        me = await _bot.get_me()
+        me = await bot.get_me()
         logger.success(f"Polling: @{me.username}")
 
-    async def on_shutdown(_bot: Bot) -> None:
+    async def on_shutdown(bot: Bot) -> None:
         await close_db()
 
     dp.startup.register(on_startup)
@@ -82,17 +82,17 @@ async def run_webhook() -> None:
     )
     dp = build_dispatcher()
 
-    async def on_startup(_bot: Bot) -> None:
+    async def on_startup(bot: Bot) -> None:
         await _init_db()
-        await _bot.set_webhook(
+        await bot.set_webhook(
             url=settings.webhook_url,
             secret_token=settings.WEBHOOK_SECRET,
             drop_pending_updates=True,
         )
-        me = await _bot.get_me()
+        me = await bot.get_me()
         logger.success(f"Webhook: @{me.username} → {settings.webhook_url}")
 
-    async def on_shutdown(_bot: Bot) -> None:
+    async def on_shutdown(bot: Bot) -> None:
         await bot.delete_webhook()
         await close_db()
 
