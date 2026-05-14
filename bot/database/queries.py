@@ -80,6 +80,17 @@ async def search_medicines_by_name(query: str) -> list[dict]:
     return await cursor.to_list(10)
 
 
+async def get_all_medicines_list() -> list[dict]:
+    """Fuzzy qidiruv uchun barcha dorilarni qaytaradi."""
+    db = await get_db()
+    cursor = db[MEDICINES].find(
+        {},
+        {"_id": 1, "name_uz": 1, "name_ru": 1, "generic_name": 1,
+         "synonyms": 1, "category": 1, "image_url": 1}
+    )
+    return await cursor.to_list(None)
+
+
 async def get_medicine_by_id(medicine_id) -> dict | None:
     db = await get_db()
     return await db[MEDICINES].find_one({"_id": medicine_id}, {"_id": 0, "name_uz": 1, "name_ru": 1})
