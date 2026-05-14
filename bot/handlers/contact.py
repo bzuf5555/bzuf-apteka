@@ -7,24 +7,18 @@ from bot.keyboards.reply import location_request_kb
 
 router = Router()
 
-_WRONG_CONTACT = """⚠️ Iltimos, <b>o'zingizning</b> kontaktingizni ulashing.
-
-Boshqa odamning raqamini emas, tugmani bosib o'zingiznikini yuboring 👇"""
-
-_CONTACT_SAVED = """✅ <b>Telefon raqamingiz saqlandi!</b>
-
-<b>2-qadam:</b> Endi joylashuvingizni ulashing 👇
-
-<i>Bot sizga eng yaqin dorixonalarni topadi.</i>"""
-
 
 @router.message(F.contact)
 async def handle_contact(message: Message) -> None:
-    user = message.from_user
+    user    = message.from_user
     contact = message.contact
 
     if contact.user_id != user.id:
-        await message.answer(_WRONG_CONTACT, parse_mode="HTML")
+        await message.answer(
+            "⚠️ Iltimos, <b>o'zingizning</b> kontaktingizni ulashing.\n"
+            "Tugmani bosib o'zingiznikini yuboring 👇",
+            parse_mode="HTML",
+        )
         return
 
     phone = contact.phone_number
@@ -32,7 +26,6 @@ async def handle_contact(message: Message) -> None:
         phone = f"+{phone}"
 
     full_name = " ".join(filter(None, [contact.first_name, contact.last_name]))
-
     await queries.save_user_contact(
         telegram_id=user.id,
         phone=phone,
@@ -40,8 +33,12 @@ async def handle_contact(message: Message) -> None:
     )
 
     await message.answer(
-        _CONTACT_SAVED,
+        f"✅ <b>Telefon raqam saqlandi!</b>\n"
+        f"📱 {phone}\n\n"
+        f"━━━━━━━━━━━━━━━━━━━━\n"
+        f"<b>2-qadam</b> — Joylashuvingizni ulashing 👇\n"
+        f"<i>Bot sizga eng yaqin dorixonalarni topadi.</i>",
         reply_markup=location_request_kb(),
         parse_mode="HTML",
     )
-    logger.info(f"Kontakt saqlandi: {user.id} → {phone}")
+    logger.info(f"Kontakt: {user.id} → {phone}")

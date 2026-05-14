@@ -4,52 +4,55 @@ from aiogram.types import Message
 from loguru import logger
 
 from bot.database import queries
-from bot.keyboards.reply import contact_request_kb, location_request_kb
+from bot.keyboards.reply import contact_request_kb, location_request_kb, main_menu_kb
 
 router = Router()
 
-_STEP1_CONTACT = """👋 Salom, <b>{name}</b>!
+_STEP1 = """🏥 <b>Dorixona Qidiruv</b>
 
-🏥 <b>Dorixona Qidiruv</b> botiga xush kelibsiz!
+Assalomu alaykum, <b>{name}</b>!
 
-Bu bot orqali:
-• Yaqin atrofdagi dorixonalarda dori bor-yo'qligini bilasiz
-• Narxlarni solishtira olasiz
-• Xaritada dorixona manzilini ko'rasiz
+Bu bot orqali siz:
+💊 Yaqin dorixonalarda dori topasiz
+💰 Narxlarni solishtirasiz
+📍 Dorixona lokatsiyasini olasiz
 
-━━━━━━━━━━━━━━━━━━━━━
-<b>1-qadam:</b> Telefon raqamingizni ulashing 👇
+━━━━━━━━━━━━━━━━━━━━
+<b>1-qadam</b> — Telefon raqamingizni ulashing 👇
+<i>Faqat xavfsizlik uchun, boshqa maqsadda ishlatilmaydi.</i>"""
 
-<i>Bu faqat xavfsizlik maqsadida — boshqa maqsadda ishlatilmaydi.</i>"""
+_STEP2 = """✅ <b>Telefon raqam saqlandi!</b>
 
-_STEP2_LOCATION = """✅ <b>Telefon raqamingiz saqlandi!</b>
-
-━━━━━━━━━━━━━━━━━━━━━
-<b>2-qadam:</b> Joylashuvingizni ulashing 👇
-
+━━━━━━━━━━━━━━━━━━━━
+<b>2-qadam</b> — Joylashuvingizni ulashing 👇
 <i>Bot sizga yaqin dorixonalarni topadi.</i>"""
 
-_LOCATION_REFRESH = """👋 Xush kelibsiz, <b>{name}</b>!
+_WELCOME_BACK = """👋 Xush kelibsiz, <b>{name}</b>!
 
-📍 Joylashuvingizni yuboring — bot atrofingizdagi dorixonalarni topadi 👇"""
+Qaysi dorini qidirasiz?
+Dori nomini yozing yoki pastdagi menyudan foydalaning 👇"""
 
-_HELP_TEXT = """ℹ️ <b>Yordam</b>
+_HELP = """ℹ️ <b>Yordam</b>
+━━━━━━━━━━━━━━━━━━━━
 
 <b>Qanday foydalanish:</b>
-1️⃣ Telefon raqamingizni ulashing
-2️⃣ Joylashuvingizni ulashing
+1️⃣ Kontaktingizni ulashing
+2️⃣ Lokatsiyangizni ulashing
 3️⃣ Dori nomini yozing
 
-<b>Misol so'rovlar:</b>
-• <i>Paracetamol</i>
-• <i>Ibuprofen 400mg</i>
-• <i>Amoxicillin</i>
-• <i>Парацетамол</i>
-• <i>No-shpa</i>
+<b>Qidiruv misollari:</b>
+• <code>Paracetamol</code>
+• <code>No-shpa</code>
+• <code>Mexidol</code>
+• <code>Boshim og'riyapti</code> ← alomat ham ishlaydi!
 
-Bot {radius} km doiradagi dorixonalarni ko'rsatadi.
+<b>Buyruqlar:</b>
+/remind — dori eslatma qo'yish
+/history — qidiruv tarixi
+/my_medicines — saqlangan dorilar
 
-<b>Muammo?</b> @admin ga yozing"""
+━━━━━━━━━━━━━━━━━━━━
+📏 Qidiruv doirasi: <b>{radius} km</b>"""
 
 
 @router.message(CommandStart())
@@ -60,23 +63,22 @@ async def cmd_start(message: Message) -> None:
         username=user.username,
         full_name=user.full_name or user.first_name,
     )
+    has_contact  = await queries.user_has_contact(user.id)
+    has_location = await queries.user_has_location(user.id)
 
-    has_contact = await queries.user_has_contact(user.id)
-
-    if has_contact:
+    if has_contact and has_location:
         await message.answer(
-            _LOCATION_REFRESH.format(name=user.first_name),
-            reply_markup=location_request_kb(),
-            parse_mode="HTML",
+            _WELCOME_BACK.format(name=user.first_name),
+            reply_markup=main_menu_kb(), parse_mode="HTML",
         )
+    elif has_contact:
+        await message.answer(_STEP2, reply_markup=location_request_kb(), parse_mode="HTML")
     else:
         await message.answer(
-            _STEP1_CONTACT.format(name=user.first_name),
-            reply_markup=contact_request_kb(),
-            parse_mode="HTML",
+            _STEP1.format(name=user.first_name),
+            reply_markup=contact_request_kb(), parse_mode="HTML",
         )
-
-    logger.info(f"/start: {user.id} contact={has_contact}")
+    logger.info(f"/start: {user.id} contact={has_contact} location={has_location}")
 
 
 @router.message(Command("help"))
@@ -84,6 +86,6 @@ async def cmd_start(message: Message) -> None:
 async def cmd_help(message: Message) -> None:
     from bot.config import settings
     await message.answer(
-        _HELP_TEXT.format(radius=int(settings.SEARCH_RADIUS_KM)),
+        _HELP.format(radius=int(settings.SEARCH_RADIUS_KM)),
         parse_mode="HTML",
     )
