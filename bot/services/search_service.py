@@ -201,6 +201,7 @@ async def search_medicine(
         "image_url": image_url,
         "display_name": display_name,
         "medicine_id": medicine_id,
+        "pharmacies": pharmacies,          # ← lokatsiya tugmalari uchun
         "found": True,
         "is_symptom": False,
         "symptom_medicines": [],

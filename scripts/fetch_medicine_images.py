@@ -187,15 +187,34 @@ async def get_wiki_image(session: aiohttp.ClientSession, generic_name: str) -> s
     except Exception:
         pass
 
+    # 3-urinish: Ruscha Wikipedia (CIS dorilar uchun)
+    try:
+        ru_title = wiki_title.replace(" ", "_")
+        url = f"https://ru.wikipedia.org/api/rest_v1/page/summary/{quote(ru_title)}"
+        async with session.get(url, headers=HEADERS, timeout=aiohttp.ClientTimeout(total=10)) as resp:
+            if resp.status == 200:
+                data = await resp.json(content_type=None)
+                thumb = data.get("thumbnail", {})
+                if thumb and thumb.get("source"):
+                    img = thumb["source"]
+                    for small in ["/100px-", "/150px-", "/200px-", "/320px-"]:
+                        img = img.replace(small, "/500px-")
+                    return img
+    except Exception:
+        pass
+
     return None
 
 
 async def run():
     db = await get_db()
 
-    # Rasmi yo'q yoki null bo'lgan dorilarni olish
+    # Rasmi yo'q (exists=False) YOKI null bo'lgan dorilar — ikkalasini ham qayta urinish
     cursor = db[MEDICINES].find(
-        {"image_url": {"$exists": False}},
+        {"$or": [
+            {"image_url": {"$exists": False}},
+            {"image_url": None},
+        ]},
         {"_id": 1, "generic_name": 1, "name_uz": 1, "name_ru": 1}
     )
     medicines = await cursor.to_list(None)

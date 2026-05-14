@@ -7,7 +7,7 @@ from bot.services import search_service
 from bot.agents.search_agent import format_generic_alternatives
 from bot.keyboards.reply import location_request_kb, main_menu_kb
 from bot.keyboards.inline import (
-    search_again_kb, search_with_watch_kb, symptom_medicines_kb
+    search_again_kb, search_with_watch_kb, symptom_medicines_kb, full_results_kb
 )
 
 router = Router()
@@ -94,10 +94,23 @@ async def handle_medicine_query(message: Message) -> None:
         )
         full_text = result["text"] + alt_text if alt_text else result["text"]
 
-        # Narq kuzatuvi + saqlash tugmasi
-        mid = result.get("medicine_id")
-        is_saved = await queries.is_medicine_saved(user.id, __import__("bson").ObjectId(mid)) if mid else False
-        kb = search_with_watch_kb(mid, is_saved=is_saved) if mid else search_again_kb()
+        # Lokatsiya + narq kuzatuvi + saqlash klaviaturasi
+        mid       = result.get("medicine_id")
+        pharmacies = result.get("pharmacies", [])
+        is_saved  = False
+        if mid:
+            try:
+                from bson import ObjectId as _OID
+                is_saved = await queries.is_medicine_saved(user.id, _OID(mid))
+            except Exception:
+                pass
+
+        if pharmacies and mid:
+            kb = full_results_kb(pharmacies, mid, is_saved=is_saved)
+        elif mid:
+            kb = search_with_watch_kb(mid, is_saved=is_saved)
+        else:
+            kb = search_again_kb()
 
         await message.answer(full_text, parse_mode="HTML", reply_markup=kb)
 

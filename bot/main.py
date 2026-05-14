@@ -16,7 +16,7 @@ from bot.config import settings
 from bot.database.connection import get_db, close_db
 from bot.database.models import create_indexes
 from bot.handlers import start, contact, location, search, admin, price_watch
-from bot.handlers import my_medicines, reminders, ratings, history
+from bot.handlers import my_medicines, reminders, ratings, history, location_cb
 from bot.services.price_watch_service import price_watch_loop
 from bot.services.reminder_service import reminder_loop
 
@@ -42,6 +42,7 @@ def build_dispatcher() -> Dispatcher:
     dp.include_router(reminders.router)
     dp.include_router(ratings.router)
     dp.include_router(history.router)
+    dp.include_router(location_cb.router)
     dp.include_router(contact.router)
     dp.include_router(location.router)
     dp.include_router(search.router)
