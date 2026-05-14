@@ -32,11 +32,12 @@ def main_menu_kb() -> ReplyKeyboardMarkup:
     return ReplyKeyboardMarkup(
         keyboard=[
             [KeyboardButton(text="🔍 Dori qidirish")],
+            [KeyboardButton(text="⭐ Mening dorilarim"), KeyboardButton(text="🕐 Tarix")],
             [
                 KeyboardButton(text="📍 Lokatsiyani yangilash", request_location=True),
                 KeyboardButton(text="ℹ️ Yordam"),
             ],
         ],
         resize_keyboard=True,
-        input_field_placeholder="Dori nomini kiriting...",
+        input_field_placeholder="Dori nomini yoki alomat yozing...",
     )

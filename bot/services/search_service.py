@@ -1,14 +1,14 @@
 """
 Dori qidiruv pipeline:
-user query → NLP normalize → MongoDB regex + fuzzy → geo filter ($near) → format
-Returns: {"text": str, "image_url": str|None, "display_name": str}
+query → NLP → DB regex → fuzzy → geo + open_now → generic muqobil → format
+Agar topilmasa → alomat tekshiruvi (Claude)
 """
 
 from __future__ import annotations
 from difflib import SequenceMatcher
 from loguru import logger
 
-from bot.agents import nlp_agent, search_agent
+from bot.agents import nlp_agent, search_agent, symptom_agent
 from bot.database import queries
 from bot.config import settings
 
@@ -21,12 +21,8 @@ async def search_medicine(
 ) -> dict:
     """
     Returns:
-        {
-            "text": str,        - HTML formatted result
-            "image_url": str|None,
-            "display_name": str,
-            "found": bool
-        }
+        text, image_url, display_name, medicine_id, found,
+        generic_alternatives, is_symptom, symptom_medicines, symptom_advice
     """
     logger.info(f"Qidiruv: '{user_query}' ({user_lat:.4f}, {user_lng:.4f})")
 
@@ -43,24 +39,45 @@ async def search_medicine(
     if not medicines:
         medicines = await _fuzzy_search(user_query)
 
+    # Topilmasa → alomat tekshiruvi
     if not medicines:
+        symptom_result = await symptom_agent.detect_symptom(user_query)
         await queries.log_search(telegram_id, user_query, 0)
+
+        if symptom_result.get("is_symptom") and symptom_result.get("medicines"):
+            return {
+                "text": "",
+                "image_url": None,
+                "display_name": user_query,
+                "medicine_id": None,
+                "found": False,
+                "is_symptom": True,
+                "symptom_medicines": symptom_result["medicines"],
+                "symptom_advice": symptom_result.get("advice", ""),
+                "generic_alternatives": [],
+            }
+
         return {
             "text": (
-                f"❓ <b>{user_query}</b> dori topilmadi.\n\n"
-                "Iltimos:\n"
+                f"❓ <b>{user_query}</b> topilmadi.\n\n"
                 "• To'g'ri yozilganini tekshiring\n"
                 "• Generic nomini sinab ko'ring\n"
-                "• Masalan: <i>Paracetamol, Ibuprofen, Amoxicillin</i>"
+                "• <i>Paracetamol, Ibuprofen, No-shpa</i>"
             ),
             "image_url": None,
             "display_name": user_query,
+            "medicine_id": None,
             "found": False,
+            "is_symptom": False,
+            "symptom_medicines": [],
+            "symptom_advice": "",
+            "generic_alternatives": [],
         }
 
     medicine = medicines[0]
     image_url = medicine.get("image_url")
     medicine_id = str(medicine["_id"])
+    generic_name = medicine.get("generic_name", "")
 
     pharmacies = await queries.find_nearby_pharmacies_with_medicine(
         medicine_id=medicine["_id"],
@@ -69,6 +86,9 @@ async def search_medicine(
         radius_km=settings.SEARCH_RADIUS_KM,
         limit=settings.MAX_RESULTS,
     )
+
+    # Generic muqobillari
+    alternatives = await queries.find_generic_alternatives(medicine["_id"], generic_name)
 
     await queries.log_search(telegram_id, user_query, len(pharmacies))
     text = await search_agent.format_results(pharmacies, display_name)
@@ -79,6 +99,10 @@ async def search_medicine(
         "display_name": display_name,
         "medicine_id": medicine_id,
         "found": True,
+        "is_symptom": False,
+        "symptom_medicines": [],
+        "symptom_advice": "",
+        "generic_alternatives": alternatives,
     }
 
 
@@ -96,6 +120,4 @@ async def _fuzzy_search(query: str) -> list[dict]:
         if score >= 0.65:
             scored.append((score, med))
     scored.sort(key=lambda x: x[0], reverse=True)
-    results = [med for _, med in scored[:3]]
-    logger.debug(f"Fuzzy: '{query}' → {len(results)} natija")
-    return results
+    return [med for _, med in scored[:3]]

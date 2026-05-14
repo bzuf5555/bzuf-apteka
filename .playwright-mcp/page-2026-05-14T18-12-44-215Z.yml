@@ -1,0 +1,99 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link [ref=e7] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - link [ref=e13] [cursor=pointer]:
+              - /url: /monitors
+              - img [ref=e15]
+            - link [ref=e22] [cursor=pointer]:
+              - /url: /incidents
+              - img [ref=e24]
+            - link [ref=e29] [cursor=pointer]:
+              - /url: /status
+              - img [ref=e31]
+            - link [ref=e38] [cursor=pointer]:
+              - /url: /maintenance
+              - img [ref=e40]
+            - link [ref=e43] [cursor=pointer]:
+              - /url: /team
+              - img [ref=e45]
+            - link [ref=e50] [cursor=pointer]:
+              - /url: /integrations
+              - img [ref=e52]
+          - img "bzuf" [ref=e63] [cursor=pointer]: b.
+        - button [ref=e65] [cursor=pointer]:
+          - img [ref=e66]
+    - main [ref=e68]:
+      - generic [ref=e70]:
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - heading "Monitors." [level=2] [ref=e74]
+            - group [ref=e75]:
+              - link "New" [ref=e76] [cursor=pointer]:
+                - /url: /monitors/new/http
+                - img [ref=e78]
+                - text: New
+              - button "Options" [ref=e82] [cursor=pointer]:
+                - img [ref=e83]
+          - generic [ref=e85]:
+            - generic [ref=e87] [cursor=pointer]:
+              - img [ref=e88]
+              - generic [ref=e91]: Show groups
+            - generic [ref=e92]:
+              - button "Search" [ref=e93] [cursor=pointer]:
+                - img [ref=e94]
+              - button "Filter" [ref=e97] [cursor=pointer]:
+                - img [ref=e99]
+                - text: Filter
+        - generic [ref=e105]:
+          - link "dorixona-bot-b48s.onrender.com/health HTTP Up 5 hr, 28 min" [ref=e112] [cursor=pointer]:
+            - /url: /monitors/803069376
+            - generic [ref=e113]:
+              - generic [ref=e114]: dorixona-bot-b48s.onrender.com/health
+              - generic [ref=e115]: HTTP
+              - text: Up 5 hr, 28 min
+          - button [ref=e117] [cursor=pointer]:
+            - img [ref=e118]
+        - complementary [ref=e123]:
+          - generic [ref=e125]:
+            - paragraph [ref=e126]: Current status.
+            - generic [ref=e130]:
+              - generic [ref=e131]:
+                - paragraph [ref=e132]: "0"
+                - paragraph [ref=e133]: Down
+              - generic [ref=e134]:
+                - paragraph [ref=e135]: "1"
+                - paragraph [ref=e136]: Up
+              - generic [ref=e137]:
+                - paragraph [ref=e138]: "0"
+                - paragraph [ref=e139]: Paused
+          - generic [ref=e141]:
+            - generic [ref=e142]:
+              - paragraph [ref=e143]: Last 24 hours.
+              - button [ref=e144] [cursor=pointer]:
+                - img [ref=e145]
+            - generic [ref=e149]:
+              - generic [ref=e150]:
+                - paragraph [ref=e151]: 100%
+                - paragraph [ref=e152]: Overall uptime
+              - generic [ref=e153]:
+                - paragraph [ref=e154]: N/A
+                - paragraph [ref=e155]: MTBF
+              - generic [ref=e156]:
+                - paragraph [ref=e157]: 1d
+                - paragraph [ref=e158]: Without inc.
+              - generic [ref=e159]:
+                - paragraph [ref=e160]: "0"
+                - paragraph [ref=e161]: Incidents
+  - alert [ref=e162]
+  - generic:
+    - region "Notifications-top"
+    - region "Notifications-top-left"
+    - region "Notifications-top-right"
+    - region "Notifications-bottom-left"
+    - region "Notifications-bottom"
+    - region "Notifications-bottom-right"

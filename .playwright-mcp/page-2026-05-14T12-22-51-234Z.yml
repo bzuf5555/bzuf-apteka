@@ -1,0 +1,293 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - navigation [ref=e5]:
+      - navigation [ref=e6]:
+        - link "MongoDB Logo" [ref=e7] [cursor=pointer]:
+          - /url: https://cloud.mongodb.com/v2#/org/69f8abbaad58453d9527c596
+          - img "MongoDB Logo" [ref=e9]
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - list [ref=e26]:
+              - listitem [ref=e27]:
+                - link "Project Icon Project Overview" [ref=e28] [cursor=pointer]:
+                  - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/overview
+                  - img "Project Icon" [ref=e30]
+                  - paragraph [ref=e33]: Project Overview
+            - link "Settings" [ref=e35] [cursor=pointer]:
+              - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/settings/groupSettings
+              - img "Settings Icon" [ref=e36]
+          - list [ref=e38]:
+            - listitem [ref=e39]:
+              - generic [ref=e40] [cursor=pointer]:
+                - img "Database Icon" [ref=e42]
+                - generic [ref=e46]: Database
+                - img "Caret Down Icon" [ref=e47]
+              - list [ref=e49]:
+                - listitem [ref=e50]:
+                  - link "Clusters" [ref=e51] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/clusters
+                    - paragraph [ref=e52]: Clusters
+                - listitem [ref=e53]:
+                  - link "Search & Vector Search" [ref=e54] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/clusters/atlasSearch
+                    - paragraph [ref=e55]: Search & Vector Search
+                - listitem [ref=e56]:
+                  - link "Data Explorer" [ref=e57] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/explorer
+                    - paragraph [ref=e58]: Data Explorer
+                - listitem [ref=e59]:
+                  - link "Backup" [ref=e60] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/security/backup/clusters
+                    - paragraph [ref=e61]: Backup
+            - listitem [ref=e62]:
+              - generic [ref=e63] [cursor=pointer]:
+                - img "Streaming Icon" [ref=e65]
+                - generic [ref=e67]: Streaming Data
+                - img "Caret Down Icon" [ref=e68]
+              - list [ref=e70]:
+                - listitem [ref=e71]:
+                  - link "Stream Processing" [ref=e72] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/streamProcessing
+                    - paragraph [ref=e73]: Stream Processing
+                - listitem [ref=e74]:
+                  - link "Triggers" [ref=e75] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/triggers
+                    - paragraph [ref=e76]: Triggers
+            - listitem [ref=e77]:
+              - generic [ref=e78] [cursor=pointer]:
+                - img "Laptop Icon" [ref=e80]
+                - generic [ref=e83]: Services
+                - img "Caret Down Icon" [ref=e84]
+              - list [ref=e86]:
+                - listitem [ref=e87]:
+                  - link "AI Models" [ref=e88] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/aiModels
+                    - paragraph [ref=e89]: AI Models
+                - listitem [ref=e90]:
+                  - link "Migration" [ref=e91] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/migration
+                    - paragraph [ref=e92]: Migration
+                - listitem [ref=e93]:
+                  - link "Data Federation" [ref=e94] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/dataFederation
+                    - paragraph [ref=e95]: Data Federation
+                - listitem [ref=e96]:
+                  - link "Visualization" [ref=e97] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/charts
+                    - paragraph [ref=e98]: Visualization
+            - listitem [ref=e99]:
+              - generic [ref=e100] [cursor=pointer]:
+                - img "Lock Icon" [ref=e102]
+                - generic [ref=e104]: Security
+                - img "Caret Down Icon" [ref=e105]
+              - list [ref=e107]:
+                - listitem [ref=e108]:
+                  - link "Security Quickstart" [ref=e109] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/setup/access
+                    - paragraph [ref=e110]: Security Quickstart
+                - listitem [ref=e111]:
+                  - link "Project Identity & Access" [ref=e112] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/access/users
+                    - paragraph [ref=e113]: Project Identity & Access
+                - listitem [ref=e114]:
+                  - link "Database & Network Access" [ref=e115] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/security/database/users
+                    - paragraph [ref=e116]: Database & Network Access
+                - listitem [ref=e117]:
+                  - link "Activity Feed" [ref=e118] [cursor=pointer]:
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/activity
+                    - paragraph [ref=e119]: Activity Feed
+        - button "Collapse Side Navigation" [ref=e121] [cursor=pointer]:
+          - img "Nav Collapse Icon" [ref=e123]
+        - text: primary
+    - navigation [ref=e126]:
+      - generic [ref=e128]:
+        - generic [ref=e129]:
+          - generic [ref=e131]: Organization
+          - button "Organization" [ref=e132] [cursor=pointer]:
+            - generic [ref=e133]:
+              - generic [ref=e134]: bzuf's Org - 2026-05-04
+              - img "Caret Down Icon" [ref=e135]
+        - img "Chevron Right Icon" [ref=e137]
+        - generic [ref=e139]:
+          - generic [ref=e141]: Project
+          - button "Project" [ref=e142] [cursor=pointer]:
+            - generic [ref=e143]:
+              - generic [ref=e144]: Project 0
+              - img "Caret Down Icon" [ref=e145]
+      - generic [ref=e147]:
+        - button "Support" [ref=e149] [cursor=pointer]:
+          - img "Question Mark With Circle Icon" [ref=e151]
+        - button "Billing" [ref=e154] [cursor=pointer]:
+          - img "Credit Card Icon" [ref=e156]
+        - button "Identity & Access Management" [ref=e159] [cursor=pointer]:
+          - img "Invite User Icon" [ref=e161]
+        - button "Alerts" [ref=e165] [cursor=pointer]:
+          - img "Bell Icon" [ref=e167]
+        - button "All Products" [ref=e170] [cursor=pointer]:
+          - img "All Products Icon" [ref=e172]
+        - button "Account" [ref=e175] [cursor=pointer]:
+          - img "Person Icon" [ref=e178]
+        - text: links
+    - main [ref=e182]:
+      - generic [ref=e184]:
+        - generic [ref=e186]:
+          - complementary [ref=e187]
+          - main [ref=e188]:
+            - generic [ref=e189]:
+              - alert [ref=e191]:
+                - img "Important With Circle Icon" [ref=e192]
+                - generic [ref=e194]:
+                  - text: Your organization does not have a designated security contact. Add an Atlas Security Contact in
+                  - link "Organization Settings" [ref=e195] [cursor=pointer]:
+                    - /url: /v2#/org/69f8abbaad58453d9527c596/settings/general
+                  - text: to receive security-related notifications.
+                - button "Close Message" [ref=e196] [cursor=pointer]:
+                  - img "X Icon" [ref=e198]
+              - heading "Project 0 Overview" [level=2] [ref=e202]
+              - generic [ref=e203]:
+                - generic [ref=e204]:
+                  - generic [ref=e206]:
+                    - generic [ref=e207]:
+                      - heading "Clusters" [level=6] [ref=e209]
+                      - generic [ref=e210]:
+                        - button "Create cluster" [ref=e212] [cursor=pointer]:
+                          - generic [ref=e214]: Create cluster
+                        - button "Ellipsis Icon" [ref=e215] [cursor=pointer]:
+                          - img "Ellipsis Icon" [ref=e217]
+                    - generic [ref=e220]:
+                      - tablist [ref=e222]:
+                        - tab "Cluster0" [selected] [ref=e223] [cursor=pointer]:
+                          - generic [ref=e224]: Cluster0
+                      - tabpanel "Cluster0" [ref=e227]:
+                        - generic [ref=e228]:
+                          - generic [ref=e229]:
+                            - button "Connect" [ref=e230] [cursor=pointer]:
+                              - generic [ref=e232]: Connect
+                            - button "Edit configuration" [ref=e233] [cursor=pointer]:
+                              - generic [ref=e235]: Edit configuration
+                          - paragraph [ref=e237]: "Data Size: 450.67 KB"
+                        - generic [ref=e239]:
+                          - button "Browse collections Arrow Right Icon" [ref=e241] [cursor=pointer]:
+                            - generic [ref=e244]:
+                              - generic [ref=e245]:
+                                - img [ref=e652]
+                                - paragraph [ref=e247]: Browse collections
+                              - img "Arrow Right Icon" [ref=e248]
+                          - button "View monitoring Arrow Right Icon" [ref=e251] [cursor=pointer]:
+                            - generic [ref=e254]:
+                              - generic [ref=e255]:
+                                - img [ref=e653]
+                                - paragraph [ref=e257]: View monitoring
+                              - img "Arrow Right Icon" [ref=e258]
+                        - button "+ Add Tag" [ref=e654] [cursor=pointer]:
+                          - generic [ref=e656]: + Add Tag
+                  - generic [ref=e264]:
+                    - generic [ref=e265]:
+                      - heading "Application Development" [level=6] [ref=e267]
+                      - generic [ref=e268]:
+                        - button "Connect new" [ref=e269] [cursor=pointer]:
+                          - generic [ref=e271]: Connect new
+                        - button "Ellipsis Icon" [ref=e272] [cursor=pointer]:
+                          - img "Ellipsis Icon" [ref=e274]
+                    - generic [ref=e277]:
+                      - generic [ref=e279]:
+                        - paragraph [ref=e280]: PyMongo|c|Motor | v4.17.0|3.7.1
+                        - paragraph [ref=e281]: Cluster0
+                      - generic [ref=e282]: Features available on your latest driver versions
+                      - generic [ref=e283]:
+                        - button "Search Arrow Right Icon" [ref=e284] [cursor=pointer]:
+                          - generic [ref=e287]:
+                            - generic [ref=e288]:
+                              - img [ref=e657]
+                              - paragraph [ref=e290]: Search
+                            - img "Arrow Right Icon" [ref=e291]
+                        - button "Vector Search Arrow Right Icon" [ref=e293] [cursor=pointer]:
+                          - generic [ref=e296]:
+                            - generic [ref=e297]:
+                              - img [ref=e658]
+                              - paragraph [ref=e299]: Vector Search
+                            - img "Arrow Right Icon" [ref=e300]
+                        - button "Query & Aggregation Arrow Right Icon" [ref=e302] [cursor=pointer]:
+                          - generic [ref=e305]:
+                            - generic [ref=e306]:
+                              - img [ref=e659]
+                              - paragraph [ref=e308]: Query & Aggregation
+                            - img "Arrow Right Icon" [ref=e309]
+                        - button "Data Visualization Arrow Right Icon" [ref=e311] [cursor=pointer]:
+                          - generic [ref=e314]:
+                            - generic [ref=e315]:
+                              - img [ref=e660]
+                              - paragraph [ref=e317]: Data Visualization
+                            - img "Arrow Right Icon" [ref=e318]
+                - generic [ref=e321]:
+                  - generic [ref=e322]:
+                    - generic [ref=e323]: Toolbar
+                    - button "more options" [ref=e324] [cursor=pointer]:
+                      - img "Ellipsis Icon" [ref=e326]
+                  - generic [ref=e328]:
+                    - tablist "segmented-control-1" [ref=e330]:
+                      - tab "Resources" [ref=e333] [cursor=pointer]:
+                        - generic [ref=e335]: Resources
+                      - tab "Tips (1)" [selected] [ref=e338] [cursor=pointer]:
+                        - generic [ref=e341]: Tips (1)
+                    - separator [ref=e343]
+                    - generic [ref=e344]:
+                      - generic [ref=e346]:
+                        - generic [ref=e347] [cursor=pointer]:
+                          - generic [ref=e349]:
+                            - img "Charts Icon" [ref=e350]
+                            - paragraph [ref=e352]: Performance (1)
+                          - button "prod-tips-chevron-icon" [ref=e353]:
+                            - img "Chevron Up Icon" [ref=e355]
+                        - generic [ref=e359]:
+                          - img "Bulb Icon" [ref=e361]
+                          - generic [ref=e364]:
+                            - paragraph [ref=e365]: Set Up Alerts
+                            - generic [ref=e366]:
+                              - paragraph [ref=e367]: Set up alerts to monitor your database and get notified about important updates.
+                              - button "View Alerts" [ref=e369] [cursor=pointer]:
+                                - generic [ref=e371]: View Alerts
+                          - button "Dismiss tip" [ref=e373] [cursor=pointer]:
+                            - img "X Icon" [ref=e375]
+                      - generic [ref=e378]:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img "Credit Card Icon"
+                              - paragraph: Cost (0)
+                          - button "prod-tips-chevron-icon":
+                            - generic:
+                              - img "Chevron Up Icon"
+                      - generic [ref=e381]:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img "Lock Icon"
+                              - paragraph: Resilience (0)
+                          - button "prod-tips-chevron-icon":
+                            - generic:
+                              - img "Chevron Up Icon"
+        - generic [ref=e396]:
+          - generic [ref=e397]:
+            - term [ref=e398]:
+              - link "System Status" [ref=e399] [cursor=pointer]:
+                - /url: https://status.mongodb.com/
+              - text: ":"
+            - definition [ref=e400]: All Good
+          - generic [ref=e401]:
+            - generic [ref=e402]: ©2026 MongoDB, Inc.
+            - link "Status" [ref=e403] [cursor=pointer]:
+              - /url: https://status.mongodb.com/
+            - link "Terms" [ref=e404] [cursor=pointer]:
+              - /url: /links/terms-of-service
+            - link "Privacy" [ref=e405] [cursor=pointer]:
+              - /url: /links/privacy-policy
+            - link "Atlas Blog" [ref=e406] [cursor=pointer]:
+              - /url: https://www.mongodb.com/blog
+            - generic [ref=e407] [cursor=pointer]: Contact Sales
+  - iframe [ref=e417]:
+    
+  - button "Open Intercom Messenger" [ref=e418] [cursor=pointer]:
+    - generic:
+      - img

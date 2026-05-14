@@ -1,0 +1,47 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Global" [ref=e3]:
+      - link "UptimeRobot" [ref=e5] [cursor=pointer]:
+        - /url: https://uptimerobot.com/
+        - generic [ref=e6]: UptimeRobot
+        - img [ref=e8]
+      - generic [ref=e11]:
+        - button "Features" [ref=e13] [cursor=pointer]:
+          - text: Features
+          - img [ref=e14]
+        - button "Solutions" [ref=e17] [cursor=pointer]:
+          - text: Solutions
+          - img [ref=e18]
+        - link "Enterprise" [ref=e20] [cursor=pointer]:
+          - /url: https://uptimerobot.com/enterprise/?ref=header
+        - button "Resources" [ref=e22] [cursor=pointer]:
+          - text: Resources
+          - img [ref=e23]
+        - link "Pricing" [ref=e25] [cursor=pointer]:
+          - /url: https://uptimerobot.com/pricing/?ref=header
+      - generic [ref=e26]:
+        - link "Log in" [ref=e27] [cursor=pointer]:
+          - /url: https://dashboard.uptimerobot.com/login?ref=header
+        - link "Get started free" [ref=e28] [cursor=pointer]:
+          - /url: https://dashboard.uptimerobot.com/sign-up?ref=header
+  - main [ref=e29]:
+    - generic [ref=e31]:
+      - strong [ref=e32]:
+        - text: "4"
+        - generic "0" [ref=e33]
+        - text: "4"
+      - heading "Oooppsie!" [level=1] [ref=e34]
+      - paragraph [ref=e35]:
+        - text: The stuff you are looking for doesn't exist or has been moved.
+        - text: Start again from home page and you will find it for sure.
+      - link "Go to Homepage" [ref=e36] [cursor=pointer]:
+        - /url: /
+  - complementary [ref=e39]:
+    - text: 🍪 This website use cookies.
+    - link "Learn more" [ref=e40] [cursor=pointer]:
+      - /url: https://uptimerobot.com/privacy
+    - button "Decline all" [ref=e41] [cursor=pointer]
+    - text: "|"
+    - button "Allow essential" [ref=e42] [cursor=pointer]
+    - text: "|"
+    - button "Accept all" [ref=e43] [cursor=pointer]

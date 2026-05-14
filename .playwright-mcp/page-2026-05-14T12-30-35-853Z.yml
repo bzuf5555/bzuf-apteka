@@ -1,0 +1,383 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - generic [ref=e5]:
+          - link "Render" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - img "Render" [ref=e8]
+          - button "b bzuf's workspace" [ref=e12] [cursor=pointer]:
+            - generic [ref=e13]:
+              - generic [ref=e14]: b
+              - generic "bzuf's workspace" [ref=e15]
+              - img [ref=e16]
+        - generic [ref=e20]:
+          - navigation [ref=e21]:
+            - list [ref=e22]:
+              - listitem [ref=e23]:
+                - generic [ref=e24]:
+                  - img [ref=e467]
+                  - generic [ref=e28]: Account settings
+          - button "Search Ctrl + K" [ref=e30] [cursor=pointer]:
+            - img [ref=e32]
+            - text: Search
+            - generic [ref=e34]:
+              - img [ref=e35]
+              - generic [ref=e37]: Ctrl
+              - generic [ref=e38]: +
+              - generic [ref=e39]: K
+              - generic [ref=e40]: K
+        - generic [ref=e41]:
+          - button "New" [ref=e43] [cursor=pointer]:
+            - generic [ref=e44]:
+              - img [ref=e45]
+              - generic [ref=e47]: New
+          - button "Upgrade" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]:
+              - img [ref=e51]
+              - generic [ref=e53]: Upgrade
+          - button "Help" [ref=e55] [cursor=pointer]:
+            - img "Help" [ref=e56]
+          - button "b" [ref=e61] [cursor=pointer]:
+            - generic [ref=e63]: b
+      - generic [ref=e64]:
+        - navigation [ref=e65]:
+          - separator [ref=e66]
+          - generic [ref=e68]:
+            - list [ref=e69]:
+              - listitem [ref=e70]:
+                - link "Projects" [ref=e71] [cursor=pointer]:
+                  - /url: /
+                  - img [ref=e72]
+                  - generic [ref=e76]: Projects
+              - listitem [ref=e77]:
+                - link "Blueprints" [ref=e78] [cursor=pointer]:
+                  - /url: /blueprints
+                  - img [ref=e79]
+                  - generic [ref=e84]: Blueprints
+              - listitem [ref=e85]:
+                - link "Environment Groups" [ref=e86] [cursor=pointer]:
+                  - /url: /env-groups
+                  - img [ref=e87]
+                  - generic [ref=e93]: Environment Groups
+            - generic [ref=e94]:
+              - generic [ref=e95]: Integrations
+              - list "Integrations" [ref=e96]:
+                - listitem [ref=e97]:
+                  - link "Observability" [ref=e98] [cursor=pointer]:
+                    - /url: /observability
+                    - img [ref=e99]
+                    - generic [ref=e101]: Observability
+                - listitem [ref=e102]:
+                  - link "Webhooks" [ref=e103] [cursor=pointer]:
+                    - /url: /webhooks
+                    - img [ref=e104]
+                    - generic [ref=e108]: Webhooks
+                - listitem [ref=e109]:
+                  - link "Notifications" [ref=e110] [cursor=pointer]:
+                    - /url: /notifications
+                    - img [ref=e111]
+                    - generic [ref=e121]: Notifications
+            - generic [ref=e122]:
+              - generic [ref=e123]: Networking
+              - list "Networking" [ref=e124]:
+                - listitem [ref=e125]:
+                  - link "Private Links" [ref=e126] [cursor=pointer]:
+                    - /url: /private-links
+                    - img [ref=e127]
+                    - generic [ref=e129]: Private Links
+            - generic [ref=e130]:
+              - generic [ref=e131]: Workspace
+              - list "Workspace" [ref=e132]:
+                - listitem [ref=e133]:
+                  - link "Billing" [ref=e134] [cursor=pointer]:
+                    - /url: /w/tea-d7rfapjt6lks73fs63a0/billing
+                    - img [ref=e135]
+                    - generic [ref=e138]: Billing
+                - listitem [ref=e139]:
+                  - link "Settings" [ref=e140] [cursor=pointer]:
+                    - /url: /w/tea-d7rfapjt6lks73fs63a0/settings
+                    - img [ref=e141]
+                    - generic [ref=e144]: Settings
+          - generic [ref=e146]:
+            - button "Collapse items" [expanded] [ref=e147] [cursor=pointer]:
+              - img [ref=e148]
+            - list "Footer navigation" [ref=e150]:
+              - listitem [ref=e151]:
+                - link "Changelog" [ref=e152] [cursor=pointer]:
+                  - /url: https://render.com/changelog
+                  - img [ref=e153]
+                  - generic [ref=e158]: Changelog
+              - listitem [ref=e159]:
+                - link "Invite a friend" [ref=e160] [cursor=pointer]:
+                  - /url: /invites
+                  - img [ref=e161]
+                  - generic [ref=e163]: Invite a friend
+              - listitem [ref=e164]:
+                - button "Contact support" [ref=e165] [cursor=pointer]:
+                  - img [ref=e166]
+                  - generic [ref=e170]: Contact support
+            - link "Render Status" [ref=e172] [cursor=pointer]:
+              - /url: https://status.render.com
+              - img [ref=e173]
+              - generic [ref=e175]: Render Status
+        - main [ref=e177]:
+          - generic [ref=e178]:
+            - heading "Account settings" [level=1] [ref=e182]
+            - generic [ref=e184]:
+              - generic [ref=e187]:
+                - heading "Profile" [level=4] [ref=e192]
+                - generic [ref=e194]:
+                  - generic [ref=e195]:
+                    - generic [ref=e198]: Full Name
+                    - generic [ref=e201]:
+                      - textbox "Full Name" [ref=e204]: bzuf
+                      - button "Edit" [ref=e206] [cursor=pointer]:
+                        - img [ref=e208]
+                        - text: Edit
+                  - generic [ref=e211]:
+                    - generic [ref=e214]: Email
+                    - generic [ref=e217]:
+                      - textbox "Email" [ref=e220]: bzuf5555@gmail.com
+                      - button "Edit" [ref=e470] [cursor=pointer]:
+                        - img [ref=e472]
+                        - text: Edit
+                  - generic [ref=e230]:
+                    - generic [ref=e233]: Avatar
+                    - generic [ref=e237]:
+                      - generic [ref=e475]: b
+                      - button "Edit" [ref=e241] [cursor=pointer]:
+                        - generic [ref=e242]:
+                          - img [ref=e243]
+                          - generic [ref=e246]: Edit
+              - generic [ref=e249]:
+                - heading "Appearance" [level=4] [ref=e254]
+                - generic [ref=e256]:
+                  - generic [ref=e257]:
+                    - generic [ref=e260]: Dashboard Theme
+                    - generic [ref=e263]:
+                      - generic [ref=e264]:
+                        - generic [ref=e265]: themeSetting
+                        - button "themeSetting System (Default)" [disabled] [ref=e267]:
+                          - generic [ref=e268]:
+                            - img [ref=e270]
+                            - generic [ref=e274]: System (Default)
+                          - img [ref=e275]
+                      - button "Edit" [ref=e278] [cursor=pointer]:
+                        - img [ref=e280]
+                        - text: Edit
+                  - generic [ref=e283]:
+                    - generic [ref=e286]: Log Explorer Theme
+                    - generic [ref=e289]:
+                      - generic [ref=e290]:
+                        - generic [ref=e291]: logThemeSetting
+                        - button "logThemeSetting Match Dashboard (Default)" [disabled] [ref=e293]:
+                          - generic [ref=e294]:
+                            - img [ref=e296]
+                            - generic [ref=e298]: Match Dashboard (Default)
+                          - img [ref=e299]
+                      - button "Edit" [ref=e302] [cursor=pointer]:
+                        - img [ref=e304]
+                        - text: Edit
+                  - generic [ref=e307]:
+                    - generic [ref=e308]:
+                      - generic [ref=e309]: High Contrast Mode
+                      - generic [ref=e310]: Increase the visibility of interactive elements.
+                    - generic [ref=e312] [cursor=pointer]:
+                      - switch [ref=e313]:
+                        - img [ref=e314]
+                      - generic [ref=e316]: Disabled
+              - generic [ref=e319]:
+                - heading "Account Security" [level=4] [ref=e324]
+                - generic [ref=e326]:
+                  - generic [ref=e328]:
+                    - generic [ref=e329]:
+                      - generic [ref=e330]: Password
+                      - paragraph
+                    - button "Create Password" [ref=e332] [cursor=pointer]
+                  - generic [ref=e333]:
+                    - generic [ref=e334]:
+                      - heading "Login Methods" [level=6] [ref=e335]
+                      - paragraph [ref=e336]: You can access your Render account with these login methods.
+                    - generic [ref=e337]:
+                      - list [ref=e476]:
+                        - listitem [ref=e477]:
+                          - generic [ref=e478]:
+                            - img [ref=e480]
+                            - generic [ref=e485]: bzuf5555@gmail.com
+                      - button "Add login method" [ref=e486] [cursor=pointer]:
+                        - generic [ref=e488]:
+                          - img [ref=e491]
+                          - img [ref=e495]
+                          - img [ref=e502]
+                        - generic [ref=e506]: Add login method
+                        - img [ref=e507]
+                  - generic [ref=e344]:
+                    - generic [ref=e345]:
+                      - heading "Git Deployment Credentials" [level=6] [ref=e346]
+                      - paragraph [ref=e347]: Credentials are used to detect code changes in your repo and deploy your services.
+                    - generic [ref=e348]:
+                      - list [ref=e509]:
+                        - listitem [ref=e510]:
+                          - generic [ref=e511]:
+                            - group [ref=e512]:
+                              - generic "bzuf5555" [ref=e513] [cursor=pointer]:
+                                - img [ref=e514]
+                                - img [ref=e517]
+                                - generic [ref=e519]: bzuf5555
+                            - button "Options" [ref=e521] [cursor=pointer]:
+                              - generic [ref=e522]: Options
+                              - img [ref=e523]
+                      - button "Add credential" [ref=e527] [cursor=pointer]:
+                        - generic [ref=e529]:
+                          - img [ref=e532]
+                          - img [ref=e536]
+                          - img [ref=e543]
+                        - generic [ref=e547]: Add credential
+                        - img [ref=e548]
+                  - generic [ref=e356]:
+                    - generic [ref=e357]:
+                      - generic [ref=e358]: Two-Factor Authentication
+                      - paragraph [ref=e359]:
+                        - text: Render uses time-based one-time passcodes (TOTP) that are compliant with all major authenticator apps and browser extensions including
+                        - link "1Password" [ref=e360] [cursor=pointer]:
+                          - /url: https://support.1password.com/one-time-passwords/
+                        - text: ","
+                        - link "Authy" [ref=e361] [cursor=pointer]:
+                          - /url: https://authy.com/
+                        - text: ", and"
+                        - link "Google Authenticator" [ref=e362] [cursor=pointer]:
+                          - /url: https://support.google.com/accounts/answer/1066447
+                        - text: .
+                    - generic [ref=e550] [cursor=pointer]:
+                      - switch [ref=e551]:
+                        - img [ref=e552]
+                      - generic [ref=e554]: Disabled
+              - generic [ref=e366]:
+                - generic [ref=e369]:
+                  - heading "CLI Tokens" [level=4] [ref=e371]
+                  - generic [ref=e372]:
+                    - text: The Render CLI uses a secure token to authenticate with the platform. Run
+                    - code [ref=e373]: render login
+                    - text: to generate a CLI token for your system. Tokens expire 7 days after creation.
+                    - link "Learn more" [ref=e374] [cursor=pointer]:
+                      - /url: https://render.com/docs/cli
+                    - text: .
+                - generic [ref=e375]: No provisioned CLI tokens.
+              - generic [ref=e384]:
+                - generic [ref=e386]:
+                  - generic [ref=e387]:
+                    - heading "API Keys" [level=4] [ref=e389]
+                    - generic [ref=e390]:
+                      - text: Authenticate your requests to the Render API.
+                      - link "Learn more." [ref=e391] [cursor=pointer]:
+                        - /url: https://api-docs.render.com/reference/authentication
+                  - button "Create API Key" [ref=e393] [cursor=pointer]:
+                    - img [ref=e395]
+                    - text: Create API Key
+                - generic [ref=e397]:
+                  - list [ref=e556]:
+                    - columnheader "Name 1 total row" [ref=e557]:
+                      - button "Name 1 total row" [ref=e558] [cursor=pointer]:
+                        - generic [ref=e559]:
+                          - generic [ref=e560]: Name
+                          - generic "1 total row" [ref=e561]: "1"
+                    - listitem [ref=e562]:
+                      - generic [ref=e563]:
+                        - rowheader "gree-uz" [ref=e564]:
+                          - generic [ref=e565]: gree-uz
+                        - button "Menu" [ref=e566] [cursor=pointer]:
+                          - generic [ref=e567]: Menu
+                          - img [ref=e568]
+                      - generic [ref=e572]:
+                        - generic [ref=e573]:
+                          - columnheader "Key" [ref=e574]
+                          - cell "rnd_ABXHgE…" [ref=e575]
+                        - generic [ref=e576]:
+                          - columnheader "Created" [ref=e577]
+                          - cell "10d" [ref=e578]:
+                            - time [ref=e579]: 10d
+                        - generic [ref=e580]:
+                          - columnheader "Last used" [ref=e581]
+                          - cell "10d" [ref=e582]:
+                            - time [ref=e583]: 10d
+                  - dialog [ref=e587]:
+                    - generic [ref=e590]:
+                      - generic [ref=e591]:
+                        - heading "Create API Key" [level=1] [ref=e593]
+                        - button "Close modal" [ref=e594] [cursor=pointer]:
+                          - img [ref=e595]
+                        - list [ref=e598]:
+                          - listitem [ref=e599]:
+                            - img [ref=e602]
+                            - heading "Choose Name" [level=3] [ref=e605]
+                          - listitem [ref=e606]:
+                            - img [ref=e609]
+                            - heading "Copy API Key" [level=3] [ref=e621]
+                      - generic [ref=e622]:
+                        - generic [ref=e623]:
+                          - generic [ref=e624]:
+                            - text: Give your API key a unique name, like
+                            - code [ref=e625]: agent
+                            - text: or
+                            - code [ref=e626]: laptop
+                            - text: .
+                            - emphasis [ref=e627]: Optional
+                          - generic [ref=e628]:
+                            - generic [ref=e629]: API key name
+                            - textbox "API key name" [active] [ref=e631]:
+                              - /placeholder: name
+                        - generic [ref=e633]:
+                          - button "Create API Key" [ref=e634] [cursor=pointer]
+                          - button "Close" [ref=e635] [cursor=pointer]
+              - generic [ref=e406]:
+                - generic [ref=e408]:
+                  - generic [ref=e409]:
+                    - heading "SSH Public Keys" [level=4] [ref=e411]
+                    - generic [ref=e412]:
+                      - link "Connect to your services" [ref=e413] [cursor=pointer]:
+                        - /url: https://render.com/docs/ssh
+                      - text: remotely by
+                      - link "authorizing SSH keys" [ref=e414] [cursor=pointer]:
+                        - /url: https://render.com/docs/ssh#ssh-setup
+                      - text: for your account.
+                  - button "Add SSH Public Key" [ref=e416] [cursor=pointer]:
+                    - img [ref=e418]
+                    - text: Add SSH Public Key
+                - generic [ref=e420]: No authorized SSH keys.
+              - generic [ref=e429]:
+                - heading "PR Requests" [level=4] [ref=e434]
+                - generic [ref=e436]:
+                  - generic [ref=e437]:
+                    - generic [ref=e439]: PR Requests
+                    - generic [ref=e440]: Create new comments on PR deploy status changes.
+                  - generic [ref=e443]:
+                    - generic [ref=e444]:
+                      - generic [ref=e445]: notifyOnPrUpdate
+                      - button "notifyOnPrUpdate Default (no new comments on PR updates)" [disabled] [ref=e447]:
+                        - generic [ref=e449]: Default (no new comments on PR updates)
+                        - img [ref=e450]
+                    - button "Edit" [ref=e453] [cursor=pointer]:
+                      - img [ref=e455]
+                      - text: Edit
+              - button "Delete Render Account" [ref=e459] [cursor=pointer]:
+                - img [ref=e461]
+                - text: Delete Render Account
+    - generic:
+      - generic:
+        - generic: "0 services selected:"
+        - generic:
+          - generic:
+            - button:
+              - generic:
+                - img
+              - generic: Move
+              - img
+      - generic:
+        - separator
+        - generic:
+          - generic:
+            - button:
+              - img
+  - iframe [ref=e466]:
+    

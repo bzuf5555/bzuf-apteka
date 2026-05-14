@@ -1,0 +1,51 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - progressbar [ref=e6]
+    - main [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - img [ref=e20]
+            - generic [ref=e25]: Вход через аккаунт Google
+          - img "MongoDB, Inc." [ref=e26]
+        - generic [ref=e27]:
+          - heading "Вход" [level=1] [ref=e28]
+          - generic [ref=e30]:
+            - text: Переход в приложение "
+            - button "MongoDB, Inc." [ref=e31] [cursor=pointer]
+            - text: "\""
+      - generic [ref=e34]:
+        - generic [ref=e39]:
+          - generic [ref=e44]:
+            - textbox "Телефон или адрес эл. почты" [ref=e45]
+            - generic: Телефон или адрес эл. почты
+          - button "Забыли адрес электронной почты?" [ref=e49] [cursor=pointer]
+        - generic [ref=e52]:
+          - text: Прежде чем начать работу с приложением "MongoDB, Inc.", вы можете ознакомиться с его
+          - link "политикой конфиденциальности" [ref=e53] [cursor=pointer]:
+            - /url: https://www.mongodb.com/legal/privacy-policy
+          - text: и
+          - link "условиями использования" [ref=e54] [cursor=pointer]:
+            - /url: https://www.mongodb.com/cloud-terms-and-conditions
+          - text: .
+      - generic [ref=e56]:
+        - button "Далее" [ref=e60]:
+          - generic [ref=e63]: Далее
+        - button "Создать аккаунт" [ref=e68]:
+          - generic [ref=e71]: Создать аккаунт
+  - contentinfo [ref=e75]:
+    - combobox "Изменение языковых настроек Русский" [ref=e79] [cursor=pointer]:
+      - generic:
+        - generic: Русский
+      - generic:
+        - img
+    - list [ref=e81]:
+      - listitem [ref=e82]:
+        - link "Справка" [ref=e83] [cursor=pointer]:
+          - /url: https://support.google.com/accounts?hl=ru&p=account_iph
+      - listitem [ref=e84]:
+        - link "Конфиденциальность" [ref=e85] [cursor=pointer]:
+          - /url: https://accounts.google.com/TOS?loc=UZ&hl=ru&privacy=true
+      - listitem [ref=e86]:
+        - link "Условия" [ref=e87] [cursor=pointer]:
+          - /url: https://accounts.google.com/TOS?loc=UZ&hl=ru

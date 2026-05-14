@@ -1,3 +1,7 @@
+
+
+
+
 # Done.md — Tugallangan Ishlar
 
 ## 2026-05-14
@@ -51,6 +55,42 @@
 - [x] Webhook import tekshiruvi — OK
 - [x] `.env` fayli `.env.example` dan yaratildi
 
-### Phase 7: Scripts
+### Phase 8: Ishga tushirish
+- [x] MongoDB 8.3 o'rnatildi (winget) → `C:\Program Files\MongoDB\Server\8.3\`
+- [x] `mongod` ishga tushirildi (`C:\data\db` data dir)
+- [x] `scripts/seed_data.py` — 10 dorixona, 15 dori, 106 inventar MongoDB ga yozildi
+- [x] `git init` + initial commit (35 fayl, 1569 qator)
+- [x] GitHub push → `https://github.com/bzuf5555/bzuf-apteka.git`
+- [x] Bot ishga tushirildi → `@bzuf_apteka_bot` polling mode ✅
+- [x] aiogram 3.28 startup handler xatosi tuzatildi va push qilindi
+
+### Phase 9: MongoDB Atlas + Render Deploy (Playwright + API)
+- [x] MongoDB Atlas — Playwright orqali avtomatik ulandi
+- [x] `bzuf5555_db_user` paroli yangilandi (autogenerate)
+- [x] Network Access `0.0.0.0/0` — allaqachon sozlangan
+- [x] MongoDB Atlas ga seed: 10 dorixona, 15 dori, 106 inventar
+- [x] Render API key yaratildi: `dorixona-bot`
+- [x] Render Web Service yaratildi: `dorixona-bot` → `https://dorixona-bot-b48s.onrender.com`
+- [x] 9 ta env var Render ga o'rnatildi (BOT_TOKEN, MONGODB_URI, WEBHOOK_HOST, va h.k.)
+- [x] Deploy boshlandi → 2 xato tuzatildi (Python 3.11, AppRunner) → **`live`** ✅
+- [x] Telegram webhook: `https://dorixona-bot-b48s.onrender.com/bot/...` — faol
+- [x] `/start` xulq-atvor o'zgartirildi: qaytgan foydalanuvchi → faqat lokatsiya so'raladi (kontaktsiz)
+- [x] Haqiqiy Toshkent dorixonalari: 991 ta OSM dorixona → MongoDB, jami 1001 ta
+- [x] **171 ta haqiqiy dori** (oldin 15 ta edi) — UZS narq diapazoni bilan:
+  - Analgetiklar, antibiotiklar, kardiovaskulyar, oshqozon, nafas yo'llari, vitaminlar, diabet, asab, dermatologiya, ko'z, antiviral va boshqalar
+  - Har bir dori: price_min, price_max (haqiqiy O'zbekiston bozori narxlari 2024-2025)
+  - 98,530 ta inventar yozuvi (1001 dorixona × ~98 ta dori)
+- [x] **Narx diapazoni ko'rinishi**: "9,000–11,000 so'm (taxminiy)" — foydalanuvchi aldanmaydi
+- [x] **146 ta dori rasmi** Wikipedia Wikimedia Commons dan (171 dan 85% coverage)
+- [x] **Narq tushganda ogohlantirish (push notification)**:
+  - Qidiruv natijasida "🔔 Narq tushsa xabar ber" tugmasi
+  - `price_watches` kolleksiyasi (user + medicine + kuzatuv narxi)
+  - Fon vazifasi har 6 soatda tekshiradi (asyncio.create_task)
+  - Narq ≥15% tushsa → foydalanuvchiga Telegram xabari
+  - Bot avval dorining rasmini yuboradi → foydalanuvchi aniq dorini ko'radi
+  - So'ng dorixonalar ro'yxati yuboriladi
+- [x] UptimeRobot monitor: `/health` ni kuzatmoqda (bot uyquga ketmasligi uchun)
+
+### Phase 10: Scripts
 - [x] `scripts/migrate.py` — MongoDB 2dsphere index yaratish
 - [x] `scripts/seed_data.py` — idempotent, 10 dorixona + 15 dori + inventar

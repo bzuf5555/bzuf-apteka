@@ -1,0 +1,251 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - navigation [ref=e5]:
+      - navigation [ref=e6]:
+        - link "MongoDB Logo" [ref=e7] [cursor=pointer]:
+          - /url: https://cloud.mongodb.com/v2#/org/69f8abbaad58453d9527c596
+          - img "MongoDB Logo" [ref=e9]
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - list [ref=e26]:
+              - listitem [ref=e27]:
+                - link "Project Icon Project Overview" [ref=e28] [cursor=pointer]:
+                  - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/overview
+                  - img "Project Icon" [ref=e30]
+                  - paragraph: Project Overview
+            - link "Settings" [ref=e35] [cursor=pointer]:
+              - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/settings/groupSettings
+              - img "Settings Icon" [ref=e36]
+          - list [ref=e38]:
+            - listitem [ref=e39]:
+              - generic [ref=e40] [cursor=pointer]:
+                - img "Database Icon" [ref=e42]
+                - generic: Database
+                - img "Caret Down Icon" [ref=e47]
+              - list:
+                - listitem:
+                  - link "Clusters":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/clusters
+                    - paragraph: Clusters
+                - listitem:
+                  - link "Search & Vector Search":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/clusters/atlasSearch
+                    - paragraph: Search & Vector Search
+                - listitem:
+                  - link "Data Explorer":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/explorer
+                    - paragraph: Data Explorer
+                - listitem:
+                  - link "Backup":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/security/backup/clusters
+                    - paragraph: Backup
+            - listitem [ref=e62]:
+              - generic [ref=e63] [cursor=pointer]:
+                - img "Streaming Icon" [ref=e65]
+                - generic: Streaming Data
+                - img "Caret Down Icon" [ref=e68]
+              - list:
+                - listitem:
+                  - link "Stream Processing":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/streamProcessing
+                    - paragraph: Stream Processing
+                - listitem:
+                  - link "Triggers":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/triggers
+                    - paragraph: Triggers
+            - listitem [ref=e77]:
+              - generic [ref=e78] [cursor=pointer]:
+                - img "Laptop Icon" [ref=e80]
+                - generic: Services
+                - img "Caret Down Icon" [ref=e84]
+              - list:
+                - listitem:
+                  - link "AI Models":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/aiModels
+                    - paragraph: AI Models
+                - listitem:
+                  - link "Migration":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/migration
+                    - paragraph: Migration
+                - listitem:
+                  - link "Data Federation":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/dataFederation
+                    - paragraph: Data Federation
+                - listitem:
+                  - link "Visualization":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/charts
+                    - paragraph: Visualization
+            - listitem [ref=e99]:
+              - generic [ref=e100] [cursor=pointer]:
+                - img "Lock Icon" [ref=e102]
+                - generic: Security
+                - img "Caret Down Icon" [ref=e105]
+              - list:
+                - listitem:
+                  - link "Security Quickstart":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/setup/access
+                    - paragraph: Security Quickstart
+                - listitem:
+                  - link "Project Identity & Access":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/access/users
+                    - paragraph: Project Identity & Access
+                - listitem:
+                  - link "Database & Network Access":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/security/database/users
+                    - paragraph: Database & Network Access
+                - listitem:
+                  - link "Activity Feed":
+                    - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/activity
+                    - paragraph: Activity Feed
+        - button "Expand Side Navigation" [ref=e661] [cursor=pointer]:
+          - img "Nav Expand Icon" [ref=e662]
+        - text: primary
+      - navigation [ref=e665]:
+        - generic [ref=e666]:
+          - heading "Database & Network Access secondary-header" [level=2] [ref=e667]
+          - text: secondary
+        - generic [ref=e668]:
+          - listitem [ref=e669]:
+            - generic [ref=e670] [cursor=pointer]:
+              - generic [ref=e671]: Database Access
+              - img "Caret Down Icon" [ref=e672]
+            - list [ref=e674]:
+              - listitem [ref=e675]:
+                - link "Database Users" [ref=e676] [cursor=pointer]:
+                  - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/security/database/users
+                  - paragraph [ref=e677]: Database Users
+              - listitem [ref=e678]:
+                - link "Custom Roles" [ref=e679] [cursor=pointer]:
+                  - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/security/database/roles
+                  - paragraph [ref=e680]: Custom Roles
+          - listitem [ref=e681]:
+            - generic [ref=e682] [cursor=pointer]:
+              - generic [ref=e683]: Network Access
+              - img "Caret Down Icon" [ref=e684]
+            - list [ref=e686]:
+              - listitem [ref=e687]:
+                - link "IP Access List" [ref=e688] [cursor=pointer]:
+                  - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/security/network/accessList
+                  - paragraph [ref=e689]: IP Access List
+              - listitem [ref=e690]:
+                - link "Peering" [ref=e691] [cursor=pointer]:
+                  - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/security/network/peering
+                  - paragraph [ref=e692]: Peering
+              - listitem [ref=e693]:
+                - link "Private Endpoint" [ref=e694] [cursor=pointer]:
+                  - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/security/network/privateEndpoint
+                  - paragraph [ref=e695]: Private Endpoint
+          - separator [ref=e696]
+          - listitem [ref=e697]:
+            - link "Advanced" [ref=e698] [cursor=pointer]:
+              - /url: https://cloud.mongodb.com/v2/69f8abbaad58453d9527c637#/security/advanced
+              - paragraph [ref=e699]: Advanced
+    - navigation [ref=e126]:
+      - generic [ref=e128]:
+        - generic [ref=e129]:
+          - generic [ref=e131]: Organization
+          - button "Organization" [ref=e132] [cursor=pointer]:
+            - generic [ref=e133]:
+              - generic [ref=e134]: bzuf's Org - 2026-05-04
+              - img "Caret Down Icon" [ref=e135]
+        - img "Chevron Right Icon" [ref=e137]
+        - generic [ref=e139]:
+          - generic [ref=e141]: Project
+          - button "Project" [ref=e142] [cursor=pointer]:
+            - generic [ref=e143]:
+              - generic [ref=e144]: Project 0
+              - img "Caret Down Icon" [ref=e145]
+      - generic [ref=e147]:
+        - button "Support" [ref=e149] [cursor=pointer]:
+          - img "Question Mark With Circle Icon" [ref=e151]
+        - button "Billing" [ref=e154] [cursor=pointer]:
+          - img "Credit Card Icon" [ref=e156]
+        - button "Identity & Access Management" [ref=e159] [cursor=pointer]:
+          - img "Invite User Icon" [ref=e161]
+        - button "Alerts" [ref=e165] [cursor=pointer]:
+          - img "Bell Icon" [ref=e167]
+        - button "All Products" [ref=e170] [cursor=pointer]:
+          - img "All Products Icon" [ref=e172]
+        - button "Account" [ref=e175] [cursor=pointer]:
+          - img "Person Icon" [ref=e178]
+        - text: links
+    - main [ref=e182]:
+      - generic [ref=e184]:
+        - generic [ref=e185]:
+          - generic [ref=e911]: "We are deploying your changes (current action: creating a plan)"
+          - generic [ref=e186]:
+            - complementary [ref=e187]
+            - main [ref=e188]:
+              - heading "Database Users" [level=2] [ref=e702]
+              - generic [ref=e703]:
+                - button "ADD NEW DATABASE USER" [ref=e705] [cursor=pointer]:
+                  - generic [ref=e707]:
+                    - img [ref=e708]
+                    - text: ADD NEW DATABASE USER
+                - table [ref=e711]:
+                  - rowgroup [ref=e712]:
+                    - row "User Sort by User Description Authentication Method Sort by Authentication Method MongoDB Roles Resources Actions" [ref=e713]:
+                      - columnheader "User Sort by User" [ref=e714]:
+                        - generic [ref=e715]:
+                          - text: User
+                          - button "Sort by User" [ref=e716] [cursor=pointer]:
+                            - img "Unsorted Icon" [ref=e718]
+                      - columnheader "Description" [ref=e720]:
+                        - generic [ref=e721]: Description
+                      - columnheader "Authentication Method Sort by Authentication Method" [ref=e722]:
+                        - generic [ref=e723]:
+                          - text: Authentication Method
+                          - button "Sort by Authentication Method" [ref=e724] [cursor=pointer]:
+                            - img "Unsorted Icon" [ref=e726]
+                      - columnheader "MongoDB Roles" [ref=e728]:
+                        - generic [ref=e729]: MongoDB Roles
+                      - columnheader "Resources" [ref=e730]:
+                        - generic [ref=e731]: Resources
+                      - columnheader "Actions" [ref=e732]:
+                        - generic [ref=e733]: Actions
+                  - rowgroup [ref=e734]:
+                    - row "bzuf5555_db_user SCRAM atlasAdmin@admin All Resources Edit Delete" [ref=e735]:
+                      - cell "bzuf5555_db_user" [ref=e736]:
+                        - generic [ref=e915]: bzuf5555_db_user
+                      - cell [ref=e742]
+                      - cell "SCRAM" [ref=e744]:
+                        - generic [ref=e916]: SCRAM
+                      - cell "atlasAdmin@admin" [ref=e747]:
+                        - generic [ref=e918]:
+                          - strong [ref=e919]: atlasAdmin
+                          - text: "@admin"
+                      - cell "All Resources" [ref=e752]:
+                        - strong [ref=e921]: All Resources
+                      - cell "Edit Delete" [ref=e756]:
+                        - generic [ref=e922]:
+                          - button "Edit" [ref=e923] [cursor=pointer]:
+                            - generic [ref=e925]:
+                              - img [ref=e926]
+                              - text: Edit
+                          - button "Delete" [ref=e928] [cursor=pointer]:
+                            - generic [ref=e930]:
+                              - img [ref=e931]
+                              - text: Delete
+        - generic [ref=e396]:
+          - generic [ref=e397]:
+            - term [ref=e398]:
+              - link "System Status" [ref=e399] [cursor=pointer]:
+                - /url: https://status.mongodb.com/
+              - text: ":"
+            - definition [ref=e400]: All Good
+          - generic [ref=e401]:
+            - generic [ref=e402]: ©2026 MongoDB, Inc.
+            - link "Status" [ref=e403] [cursor=pointer]:
+              - /url: https://status.mongodb.com/
+            - link "Terms" [ref=e404] [cursor=pointer]:
+              - /url: /links/terms-of-service
+            - link "Privacy" [ref=e405] [cursor=pointer]:
+              - /url: /links/privacy-policy
+            - link "Atlas Blog" [ref=e406] [cursor=pointer]:
+              - /url: https://www.mongodb.com/blog
+            - generic [ref=e407] [cursor=pointer]: Contact Sales
+  - iframe [ref=e417]:
+    
+  - button "Open Intercom Messenger" [ref=e418] [cursor=pointer]:
+    - generic:
+      - img

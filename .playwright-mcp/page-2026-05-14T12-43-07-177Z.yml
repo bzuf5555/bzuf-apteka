@@ -1,0 +1,706 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Global" [ref=e3]:
+      - link "UptimeRobot" [ref=e5] [cursor=pointer]:
+        - /url: https://uptimerobot.com/
+        - generic [ref=e6]: UptimeRobot
+        - img [ref=e8]
+      - generic [ref=e11]:
+        - button "Features" [ref=e13] [cursor=pointer]:
+          - text: Features
+          - img [ref=e14]
+        - button "Solutions" [ref=e17] [cursor=pointer]:
+          - text: Solutions
+          - img [ref=e18]
+        - link "Enterprise" [ref=e20] [cursor=pointer]:
+          - /url: https://uptimerobot.com/enterprise/?ref=header
+        - button "Resources" [ref=e22] [cursor=pointer]:
+          - text: Resources
+          - img [ref=e23]
+        - link "Pricing" [ref=e25] [cursor=pointer]:
+          - /url: https://uptimerobot.com/pricing/?ref=header
+      - generic [ref=e26]:
+        - link "Log in" [ref=e27] [cursor=pointer]:
+          - /url: https://dashboard.uptimerobot.com/login?ref=header
+        - link "Get started free" [ref=e28] [cursor=pointer]:
+          - /url: https://dashboard.uptimerobot.com/sign-up?ref=header
+  - main [ref=e29]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - img "SourceForge" [ref=e34]
+          - img "G2 Leader" [ref=e35]
+          - img "Capterra" [ref=e36]
+        - paragraph [ref=e37]: Over 3.2M+ users trust UptimeRobot.
+      - generic [ref=e38]:
+        - 'heading "Meet the #1 uptime monitoring service." [level=1] [ref=e39]':
+          - generic [ref=e40]: "Meet the #1"
+          - text: uptime monitoring service.
+        - list [ref=e41]:
+          - listitem [ref=e42]:
+            - img [ref=e43]
+            - generic [ref=e45]: 50 monitors for free
+          - listitem [ref=e46]:
+            - img [ref=e47]
+            - generic [ref=e49]: 20+ integrations
+          - listitem [ref=e50]:
+            - img [ref=e51]
+            - generic [ref=e53]: Real-time alerts, web & mobile
+          - listitem [ref=e54]:
+            - img [ref=e55]
+            - generic [ref=e57]: Public status pages
+        - link "Start monitoring in 30 seconds" [ref=e59] [cursor=pointer]:
+          - /url: https://dashboard.uptimerobot.com/sign-up?ref=hp-advanced
+        - img "UptimeRobot" [ref=e62]
+    - generic [ref=e67]:
+      - img "accenture-logo" [ref=e69]
+      - img "gitlab-logo" [ref=e71]
+      - img "hewlett-logo" [ref=e73]
+      - img "ibm-logo" [ref=e75]
+      - img "ingr-logo" [ref=e77]
+      - img "intel-logo" [ref=e79]
+      - img "moodys-logo" [ref=e81]
+      - img "rmit-logo" [ref=e83]
+      - img "squareup-logo" [ref=e85]
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - heading "Catch downtime before your users do." [level=2] [ref=e90]
+        - paragraph [ref=e92]: Monitor uptime, SSL certificates, ports, and cron jobs in real time. Set up monitors in minutes, get instant alerts when something breaks, and integrate with your existing workflow effortlessly.
+      - generic [ref=e93]:
+        - link "Website monitoring Monitor any HTTP(s) endpoint or page" [ref=e94] [cursor=pointer]:
+          - /url: https://uptimerobot.com/website-monitoring/?ref=card
+          - img [ref=e97]:
+            - img [ref=e105]
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - heading "Website monitoring" [level=3] [ref=e109]
+              - paragraph [ref=e110]: Monitor any HTTP(s) endpoint or page
+            - img [ref=e113]
+        - link "Keyword monitoring Get alerted if a keyword appears or disappears" [ref=e115] [cursor=pointer]:
+          - /url: https://uptimerobot.com/keyword-monitoring/?ref=card
+          - img [ref=e118]:
+            - img [ref=e126]
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - heading "Keyword monitoring" [level=3] [ref=e130]
+              - paragraph [ref=e131]: Get alerted if a keyword appears or disappears
+            - img [ref=e134]
+        - link "Ping monitoring Make sure your server or any device in the network is always available." [ref=e136] [cursor=pointer]:
+          - /url: https://uptimerobot.com/ping-monitoring/?ref=card
+          - img [ref=e139]:
+            - img [ref=e147]
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - heading "Ping monitoring" [level=3] [ref=e151]
+              - paragraph [ref=e152]: Make sure your server or any device in the network is always available.
+            - img [ref=e155]
+        - link "Port monitoring Useful for SMTP, POP3, FTP, and other services running on specific TCP ports" [ref=e157] [cursor=pointer]:
+          - /url: https://uptimerobot.com/port-monitoring/?ref=card
+          - img [ref=e160]:
+            - img [ref=e168]
+          - generic [ref=e170]:
+            - generic [ref=e171]:
+              - heading "Port monitoring" [level=3] [ref=e172]
+              - paragraph [ref=e173]: Useful for SMTP, POP3, FTP, and other services running on specific TCP ports
+            - img [ref=e176]
+        - link "Cron job monitoring Know if a scheduled job fails or goes missing" [ref=e178] [cursor=pointer]:
+          - /url: https://uptimerobot.com/cron-job-monitoring/?ref=card
+          - img [ref=e181]:
+            - img [ref=e189]
+          - generic [ref=e191]:
+            - generic [ref=e192]:
+              - heading "Cron job monitoring" [level=3] [ref=e193]
+              - paragraph [ref=e194]: Know if a scheduled job fails or goes missing
+            - img [ref=e197]
+        - link "DNS record monitoring Catch unauthorised DNS changes early" [ref=e199] [cursor=pointer]:
+          - /url: https://uptimerobot.com/dns-monitoring/?ref=card
+          - img [ref=e202]:
+            - img [ref=e210]
+          - generic [ref=e212]:
+            - generic [ref=e213]:
+              - heading "DNS record monitoring" [level=3] [ref=e214]
+              - paragraph [ref=e215]: Catch unauthorised DNS changes early
+            - img [ref=e218]
+    - generic [ref=e222]:
+      - generic [ref=e223]:
+        - heading "Need more than 1,000 monitors? Get an enterprise demo." [level=2] [ref=e224]
+        - list [ref=e225]:
+          - listitem [ref=e226]:
+            - generic [ref=e228]: 30-second check intervals
+          - listitem [ref=e229]:
+            - generic [ref=e231]: Unlimited status pages
+          - listitem [ref=e232]:
+            - generic [ref=e234]: SOC 2, CCPA, GDPR compliant
+          - listitem [ref=e235]:
+            - generic [ref=e237]: Dedicated success manager
+        - link "Book a demo" [ref=e239] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e240]: Book a demo
+      - generic [ref=e241]:
+        - generic:
+          - img "Register Free"
+    - generic [ref=e242]:
+      - generic [ref=e244]:
+        - heading "Trusted by over 3.2M+ developers and teams." [level=2] [ref=e246]
+        - generic [ref=e247]:
+          - generic [ref=e248]:
+            - generic [ref=e249]:
+              - generic [ref=e250]: "4.7"
+              - img [ref=e251]
+            - generic [ref=e253]: stars out of 5
+          - generic [ref=e254]:
+            - generic [ref=e255]: 265+
+            - generic [ref=e256]:
+              - text: reviews on
+              - img [ref=e257]
+      - generic [ref=e259]:
+        - generic [ref=e261]:
+          - generic [ref=e264]:
+            - img "WordPress VIP" [ref=e267]
+            - blockquote [ref=e268]: "\"Thanks to monitoring thousands of domains, WordPress VIP improved response times and performance while also saving on infrastructure costs.\""
+            - generic [ref=e269]:
+              - img "Doyle Irvin" [ref=e271]
+              - generic [ref=e272]:
+                - generic [ref=e273]: Doyle Irvin
+                - generic [ref=e274]: Product Marketing Manager
+            - link "Read case study" [ref=e275] [cursor=pointer]:
+              - /url: https://uptimerobot.com/case-studies/wpvip/
+              - text: Read case study
+              - img [ref=e276]
+          - generic [ref=e280]:
+            - img "ConfigCat" [ref=e283]
+            - blockquote [ref=e284]: "\"ConfigCat significantly enhanced the user experience and trust by making UptimeRobot and live alerts an essential part of their uptime monitoring.\""
+            - generic [ref=e285]:
+              - img "Gergely Sinka" [ref=e287]
+              - generic [ref=e288]:
+                - generic [ref=e289]: Gergely Sinka
+                - generic [ref=e290]: Founder & CPO at ConfigCat
+            - link "Read case study" [ref=e291] [cursor=pointer]:
+              - /url: https://uptimerobot.com/case-studies/configcat/
+              - text: Read case study
+              - img [ref=e292]
+          - generic [ref=e296]:
+            - img "Stratosphere Lab" [ref=e299]
+            - blockquote [ref=e300]: "\"UptimeRobot is now part of our core tools for monitoring. The integration with Slack and the Mobile application allows us to have information on what is happening and resolve incidents as fast as possible.\""
+            - generic [ref=e301]:
+              - img "Veronika Valeros" [ref=e303]
+              - generic [ref=e304]:
+                - generic [ref=e305]: Veronika Valeros
+                - generic [ref=e306]: Senior Researcher & Project Leader
+            - link "Read case study" [ref=e307] [cursor=pointer]:
+              - /url: https://uptimerobot.com/case-studies/stratospherelab/
+              - text: Read case study
+              - img [ref=e308]
+          - generic [ref=e312]:
+            - img "Heineken" [ref=e315]
+            - blockquote [ref=e316]: "\"For critical services , uptime is crucial. UptimeRobot notifies us instantly when there's downtime or degraded performance, allowing us to respond efficiently.\""
+            - generic [ref=e317]:
+              - img "David Bezgovšek" [ref=e319]
+              - generic [ref=e320]:
+                - generic [ref=e321]: David Bezgovšek
+                - generic [ref=e322]: IT Service Delivery Manager
+            - link "Read case study" [ref=e323] [cursor=pointer]:
+              - /url: https://uptimerobot.com/case-studies/heineken/
+              - text: Read case study
+              - img [ref=e324]
+        - generic [ref=e326]:
+          - button "Previous" [ref=e327] [cursor=pointer]:
+            - img [ref=e328]
+            - generic [ref=e330]: Previous
+          - button "Next" [ref=e331] [cursor=pointer]:
+            - img [ref=e332]
+            - generic [ref=e334]: Next
+    - generic [ref=e338]:
+      - generic [ref=e339]:
+        - heading "Real-time status pages for your website, API, or service." [level=2] [ref=e340]
+        - paragraph [ref=e341]: Create branded, real-time status pages to share uptime, incidents, and maintenance updates — no extra tools required. Keep your users informed and automatically reduce support tickets.
+        - list [ref=e342]:
+          - listitem [ref=e343]:
+            - img [ref=e345]
+            - generic [ref=e347]: Custom domains & branding
+          - listitem [ref=e348]:
+            - img [ref=e350]
+            - generic [ref=e352]: Incident history
+          - listitem [ref=e353]:
+            - img [ref=e355]
+            - generic [ref=e357]: Embed monitors automatically
+          - listitem [ref=e358]:
+            - img [ref=e360]
+            - generic [ref=e362]: Password protection & private pages
+        - generic [ref=e363]:
+          - link "Learn more" [ref=e364] [cursor=pointer]:
+            - /url: https://uptimerobot.com/status-page/?ref=hp-status-pages
+            - generic [ref=e365]: Learn more
+            - img [ref=e366]
+          - link "Check our live demo" [ref=e368] [cursor=pointer]:
+            - /url: https://status.uptimerobot.com/
+      - generic:
+        - generic:
+          - generic:
+            - img "Keep Your Users Informed"
+    - generic [ref=e371]:
+      - generic [ref=e372]:
+        - generic:
+          - img "Setup in under 2 minutes"
+      - generic [ref=e373]:
+        - heading "Start monitoring in seconds. Seriously." [level=2] [ref=e374]:
+          - text: Start monitoring in seconds.
+          - text: Seriously.
+        - paragraph [ref=e375]: Start monitoring any website, API, or server in seconds. Our intuitive dashboard, powerful API, and detailed documentation make setup effortless.
+        - list [ref=e376]:
+          - listitem [ref=e377]:
+            - generic [ref=e379]: Easy-to-use dashboard
+          - listitem [ref=e380]:
+            - generic [ref=e382]: One-click status page setup
+          - listitem [ref=e383]:
+            - generic [ref=e385]: Detailed reports & downtime insights
+          - listitem [ref=e386]:
+            - generic [ref=e388]: Intuitive mobile app
+        - link "Start monitoring in 30 seconds" [ref=e390] [cursor=pointer]:
+          - /url: https://dashboard.uptimerobot.com/sign-up?ref=hp-advanced
+          - generic [ref=e391]: Start monitoring in 30 seconds
+    - generic [ref=e394]:
+      - generic [ref=e395]:
+        - heading "Deep insights. Full control. Zero blind spots." [level=2] [ref=e396]
+        - generic [ref=e399]:
+          - generic [ref=e402] [cursor=pointer]:
+            - heading "Multi-location checks" [level=3] [ref=e403]
+            - paragraph [ref=e404]: Verify uptime from multiple global locations to eliminate false positives.
+            - link "Learn more" [ref=e405]:
+              - /url: https://uptimerobot.com/location-specific-monitoring/?ref=hp-multi-location
+              - text: Learn more
+              - img [ref=e406]
+          - heading "Response time alerts" [level=3] [ref=e411] [cursor=pointer]
+          - heading "Incident management tools" [level=3] [ref=e415] [cursor=pointer]
+          - heading "Role-based team access" [level=3] [ref=e419] [cursor=pointer]
+          - heading "Maintenance windows" [level=3] [ref=e423] [cursor=pointer]
+      - generic [ref=e424]:
+        - paragraph [ref=e427]: Go beyond simple uptime checks with advanced monitoring, incident management and access built for scaling teams.
+        - generic [ref=e428]:
+          - generic:
+            - generic:
+              - img "Multi Location Checks"
+    - generic [ref=e431]:
+      - generic [ref=e432]:
+        - generic [ref=e433]:
+          - generic:
+            - generic:
+              - img "Get Alerts"
+        - generic [ref=e434]:
+          - generic [ref=e435]:
+            - heading "Integrations that keep your whole team in the loop." [level=3] [ref=e436]
+            - paragraph [ref=e437]: From chat to incident management, we integrate with 20+ services so your team never misses a critical update.
+          - link "Explore UptimeRobot integrations" [ref=e438] [cursor=pointer]:
+            - /url: https://uptimerobot.com/integrations/?ref=hp-integrations
+            - img [ref=e439]
+      - generic [ref=e441]:
+        - generic [ref=e443]:
+          - generic:
+            - img "Stay Notified"
+        - generic [ref=e444]:
+          - generic [ref=e445]:
+            - heading "Monitor on the go. Stay in control anywhere." [level=3] [ref=e446]
+            - paragraph [ref=e447]: Get real-time alerts and manage all your monitors from anywhere. Check statuses, pause monitors, and resolve incidents instantly
+          - link "Get the UptimeRobot mobile app" [ref=e448] [cursor=pointer]:
+            - /url: https://uptimerobot.com/mobile-app/?ref=hp-mobile-app
+            - img [ref=e449]
+    - generic [ref=e452]:
+      - heading "Frequently asked questions." [level=2] [ref=e453]
+      - generic [ref=e454]:
+        - generic [ref=e455]:
+          - button "What is UptimeRobot?" [expanded] [ref=e456] [cursor=pointer]:
+            - heading "What is UptimeRobot?" [level=3] [ref=e457]
+            - img [ref=e459]
+          - generic [ref=e463]:
+            - paragraph [ref=e464]:
+              - text: UptimeRobot is an uptime monitoring service that continuously checks
+              - link "websites, APIs, and other endpoints" [ref=e465] [cursor=pointer]:
+                - /url: /website-monitoring/?ref=hp-faq
+              - text: . It alerts you when anything goes down, degrades, or changes. So you can stay on top of your systems' current states and identify issues before your users do.
+            - paragraph [ref=e466]:
+              - text: UptimeRobot also provides tools to transparently communicate the
+              - link "real-time status" [ref=e467] [cursor=pointer]:
+                - /url: /knowledge-hub/monitoring/building-a-status-page-ultimate-guide/?ref=hp-faq
+              - text: and reliability of your systems, and proactively
+              - link "manage incidents" [ref=e468] [cursor=pointer]:
+                - /url: /knowledge-hub/devops/what-is-incident-management/?ref=hp-faq
+              - text: when they happen.
+        - generic [ref=e469]:
+          - button "What is an uptime monitor?" [ref=e470] [cursor=pointer]:
+            - heading "What is an uptime monitor?" [level=3] [ref=e471]
+            - img [ref=e473]
+          - generic [ref=e475]:
+            - paragraph [ref=e476]: An uptime monitor is a single tool that repeatedly verifies a target webpage or service is online and working as expected.
+            - paragraph [ref=e477]:
+              - text: When an uptime monitor detects a problem, it instantly sends
+              - link "alerts" [ref=e478] [cursor=pointer]:
+                - /url: https://help.uptimerobot.com/en/collections/13158948-alerts-notifications?ref=hp-faq
+              - text: (via email, SMS/IM, call, etc.) so you can respond quickly. It also records incidents with timestamps and details in your dashboard so that you can track reliability over time.
+            - paragraph [ref=e479]:
+              - text: Uptime monitors support various
+              - link "monitoring types" [ref=e480] [cursor=pointer]:
+                - /url: /knowledge-hub/monitoring/ultimate-guide-to-uptime-monitoring-types/?ref=hp-faq
+              - text: (HTTP, Ping, Port, Keyword, DNS, Heartbeat), targets (URL/IP/Port), and alerting rules (including escalation).
+        - generic [ref=e481]:
+          - button "How do I monitor the uptime of a website?" [ref=e482] [cursor=pointer]:
+            - heading "How do I monitor the uptime of a website?" [level=3] [ref=e483]
+            - img [ref=e485]
+          - list [ref=e488]:
+            - listitem [ref=e489]:
+              - link "Sign up" [ref=e490] [cursor=pointer]:
+                - /url: https://dashboard.uptimerobot.com/sign-up?ref=hp-faq
+              - text: to create a free UptimeRobot account
+            - listitem [ref=e491]: In the dashboard, click Add New Monitor
+            - listitem [ref=e492]: Choose HTTP(S) as the monitor type and enter the website URL
+            - listitem [ref=e493]: Set the monitoring interval and any optional settings you care about (timeouts, redirects, keyword checks)
+            - listitem [ref=e494]: Add your preferred notification channels (email, push, Slack, SMS, etc.) and save the monitor
+            - listitem [ref=e495]:
+              - text: "Optionally:"
+              - link "create a status page" [ref=e496] [cursor=pointer]:
+                - /url: /knowledge-hub/monitoring/building-a-status-page-ultimate-guide/?ref=hp-faq
+        - generic [ref=e497]:
+          - button "How do I create a status page?" [ref=e498] [cursor=pointer]:
+            - heading "How do I create a status page?" [level=3] [ref=e499]
+            - img [ref=e501]
+          - list [ref=e504]:
+            - listitem [ref=e505]:
+              - link "Sign up" [ref=e506] [cursor=pointer]:
+                - /url: https://dashboard.uptimerobot.com/sign-up?ref=hp-faq
+              - text: and create a free UptimeRobot account
+            - listitem [ref=e507]:
+              - link "Create your first monitor" [ref=e508] [cursor=pointer]:
+                - /url: https://help.uptimerobot.com/en/articles/11358364-how-to-create-your-first-monitor-on-uptimerobot-quick-setup-guide/?ref=hp-faq
+              - text: (so there's something to display)
+            - listitem [ref=e509]: Go to Status Pages and click Create Status Page
+            - listitem [ref=e510]: Select the monitors (or tags) you want to show, then name the page
+            - listitem [ref=e511]: Publish your status page
+            - listitem [ref=e512]:
+              - text: "Optionally: customize the"
+              - link "design" [ref=e513] [cursor=pointer]:
+                - /url: /blog/10-real-status-page-examples/?ref=hp-faq
+              - text: ", set a custom domain, password-protect it, opt out of search engine indexing, and use announcements for incident/maintenance updates (users can subscribe with email right on your status page)."
+        - generic [ref=e514]:
+          - button "What can I monitor with UptimeRobot?" [ref=e515] [cursor=pointer]:
+            - heading "What can I monitor with UptimeRobot?" [level=3] [ref=e516]
+            - img [ref=e518]
+          - generic [ref=e520]:
+            - paragraph [ref=e521]:
+              - text: With UptimeRobot, you can monitor any website, API, server, application, service,
+              - link "network" [ref=e522] [cursor=pointer]:
+                - /url: /knowledge-hub/monitoring/what-is-network-monitoring/?ref=hp-faq
+              - text: ", or endpoint, whether it’s yours, a third-party vendor’s, or a dependency you rely on. Additionally, UptimeRobots supports these monitor types:"
+            - list [ref=e523]:
+              - listitem [ref=e524]: HTTP/HTTPS
+              - listitem [ref=e525]:
+                - link "Keywords" [ref=e526] [cursor=pointer]:
+                  - /url: /blog/keyword-monitoring-use-cases/?ref=hp-faq
+                - text: in server responses and on-page
+              - listitem [ref=e527]:
+                - link "Ping" [ref=e528] [cursor=pointer]:
+                  - /url: /knowledge-hub/monitoring/icmp-ping-monitoring/?ref=hp-faq
+              - listitem [ref=e529]:
+                - link "Port" [ref=e530] [cursor=pointer]:
+                  - /url: /knowledge-hub/monitoring/what-is-port-monitoring/?ref=hp-faq
+              - listitem [ref=e531]:
+                - link "Cron jobs/heartbeats" [ref=e532] [cursor=pointer]:
+                  - /url: /cron-job-monitoring/?ref=hp-faq
+              - listitem [ref=e533]:
+                - link "Website change detection" [ref=e534] [cursor=pointer]:
+                  - /url: /knowledge-hub/monitoring/website-change-detection-guide/?ref=hp-faq
+              - listitem [ref=e535]:
+                - link "Response time" [ref=e536] [cursor=pointer]:
+                  - /url: /knowledge-hub/response-time-page-speed/response-time-monitoring-guide/?ref=hp-faq
+              - listitem [ref=e537]:
+                - link "DNS changes" [ref=e538] [cursor=pointer]:
+                  - /url: /knowledge-hub/monitoring/dns-monitoring-the-complete-guide/?ref=hp-faq
+              - listitem [ref=e539]:
+                - link "SSL certificates" [ref=e540] [cursor=pointer]:
+                  - /url: /knowledge-hub/monitoring/ssl-certificate-errors/?ref=hp-faq
+                - text: and
+                - link "domain expiry" [ref=e541] [cursor=pointer]:
+                  - /url: /blog/monitor-domain-expiration/?ref=hp-faq
+            - paragraph [ref=e542]: The variety of monitor types lets you track availability, response behavior, certificates, scheduled jobs, and infrastructure changes from one place.
+        - generic [ref=e543]:
+          - button "How often does UptimeRobot check my website?" [ref=e544] [cursor=pointer]:
+            - heading "How often does UptimeRobot check my website?" [level=3] [ref=e545]
+            - img [ref=e547]
+          - generic [ref=e549]:
+            - paragraph [ref=e550]:
+              - text: UptimeRobot can check your site and other endpoints as often as every 30 seconds and as infrequently as every 5 minutes, depending on your monitor's settings. The available
+              - link "monitoring intervals" [ref=e551] [cursor=pointer]:
+                - /url: https://help.uptimerobot.com/en/articles/11360876-what-is-a-monitoring-interval-in-uptimerobot/?ref=hp-faq
+              - text: "in your account also depend on your plan:"
+            - list [ref=e552]:
+              - listitem [ref=e553]: "Free: every 5 minutes"
+              - listitem [ref=e554]: "Solo/Team: every 60 seconds"
+              - listitem [ref=e555]: "Enterprise: every 30 seconds"
+            - paragraph [ref=e556]: Faster intervals improve time-to-detect, but can create more noise if your endpoint is flaky or the network is unstable.
+        - generic [ref=e557]:
+          - button "Can I monitor from multiple locations/regions?" [ref=e558] [cursor=pointer]:
+            - heading "Can I monitor from multiple locations/regions?" [level=3] [ref=e559]
+            - img [ref=e561]
+          - paragraph [ref=e564]:
+            - text: Yes, UptimeRobots supports
+            - link "location-specific monitoring" [ref=e565] [cursor=pointer]:
+              - /url: /blog/location-specific-monitoring/?ref=hp-faq
+            - text: . With multi-location checks, you can spot regional outages, routing problems, or CDN edge issues that won't show up from a single vantage point. It's especially useful for DNS and security scenarios where failures can first appear in one location.
+        - generic [ref=e566]:
+          - button "How do I get an alert when a website is down (by email, SMS/IM, or phone)?" [ref=e567] [cursor=pointer]:
+            - heading "How do I get an alert when a website is down (by email, SMS/IM, or phone)?" [level=3] [ref=e568]
+            - img [ref=e570]
+          - paragraph [ref=e573]:
+            - text: Add one or more notification channels and associate them with your monitors. The available personal channels include Email, SMS, Voice Call, Mobile App Push, and Email-to-SMS; and the
+            - link "integrations" [ref=e574] [cursor=pointer]:
+              - /url: /integrations/?ref=hp-faq
+            - text: include
+            - link "Telegram" [ref=e575] [cursor=pointer]:
+              - /url: /integrations/telegram-integration/?ref=hp-faq
+            - text: ","
+            - link "Slack" [ref=e576] [cursor=pointer]:
+              - /url: /integrations/slack-integration/?ref=hp-faq
+            - text: ","
+            - link "Microsoft Teams" [ref=e577] [cursor=pointer]:
+              - /url: /integrations/microsoft-teams-integration/?ref=hp-faq
+            - text: ","
+            - link "Discord" [ref=e578] [cursor=pointer]:
+              - /url: /integrations/discord-integration/?ref=hp-faq
+            - text: ","
+            - link "Google Chat" [ref=e579] [cursor=pointer]:
+              - /url: /integrations/google-chat-integration/?ref=hp-faq
+            - text: ", Mattermost,"
+            - link "PagerDuty" [ref=e580] [cursor=pointer]:
+              - /url: /integrations/pagerduty-integration/?ref=hp-faq
+            - text: ", Splunk On-Call,"
+            - link "Pushbullet" [ref=e581] [cursor=pointer]:
+              - /url: /integrations/pushbullet-integration/?ref=hp-faq
+            - text: ", and"
+            - link "Pushover" [ref=e582] [cursor=pointer]:
+              - /url: /integrations/pushover-integration/?ref=hp-faq
+            - text: . For custom workflows, you can also use
+            - link "Webhooks" [ref=e583] [cursor=pointer]:
+              - /url: /integrations/webhooks-integration/?ref=hp-faq
+            - text: ","
+            - link "Zapier" [ref=e584] [cursor=pointer]:
+              - /url: /integrations/zapier-integration/?ref=hp-faq
+            - text: ","
+            - link "MCP" [ref=e585] [cursor=pointer]:
+              - /url: /mcp/?ref=hp-faq
+            - text: ", or"
+            - link "API" [ref=e586] [cursor=pointer]:
+              - /url: /api/?ref=hp-faq
+            - text: .
+        - generic [ref=e587]:
+          - button "How does UptimeRobot reduce false alarms (false positives)?" [ref=e588] [cursor=pointer]:
+            - heading "How does UptimeRobot reduce false alarms (false positives)?" [level=3] [ref=e589]
+            - img [ref=e591]
+          - paragraph [ref=e594]:
+            - text: UptimeRobot reduces false alarms by rechecking failures across multiple checker nodes and locations before opening an incident. You can further improve signal-to-noise by white-listing UptimeRobot’s
+            - link "locations and IP addresses" [ref=e595] [cursor=pointer]:
+              - /url: /help/locations/?ref=hp-faq
+            - text: ", tuning sensitivity (timeouts and delays), and using more specific checks (such as validating a keyword or expected response behavior). For planned work, use maintenance windows to pause monitoring so expected downtime doesn’t trigger alerts or affect"
+            - link "uptime calculation" [ref=e596] [cursor=pointer]:
+              - /url: /free-tools/uptime-downtime-calculator/?ref=hp-faq
+            - text: and downtime statistics.
+    - generic [ref=e597]:
+      - generic:
+        - generic:
+          - img "CTA Banner"
+      - generic [ref=e598]:
+        - generic [ref=e599]:
+          - generic [ref=e600]:
+            - generic [ref=e601]:
+              - generic [ref=e602]: "4.7"
+              - img [ref=e603]
+            - generic [ref=e605]: stars out of 5
+          - generic [ref=e606]:
+            - generic [ref=e607]: 265+
+            - generic [ref=e608]:
+              - text: reviews on
+              - img [ref=e609]
+        - heading "Start monitoring in 30 seconds." [level=2] [ref=e611]
+        - paragraph [ref=e612]: There's nothing to install. No credit card required. 50 monitors for free.
+        - link "Get started free" [ref=e614] [cursor=pointer]:
+          - /url: https://dashboard.uptimerobot.com/sign-up?ref=hp-advanced
+  - contentinfo [ref=e615]:
+    - generic [ref=e616]:
+      - generic [ref=e617]:
+        - generic [ref=e618]:
+          - link [ref=e620] [cursor=pointer]:
+            - /url: https://uptimerobot.com/
+            - img [ref=e621]
+          - paragraph [ref=e624]:
+            - text: Downtime happens.
+            - text: Get notified!
+          - generic [ref=e625]:
+            - link "Facebook" [ref=e626] [cursor=pointer]:
+              - /url: https://www.facebook.com/UptimeRobot/
+              - img [ref=e627]
+            - link "X (Twitter)" [ref=e630] [cursor=pointer]:
+              - /url: https://x.com/uptimerobot
+              - img [ref=e631]
+            - link "LinkedIn" [ref=e634] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/uptime-robot/
+              - img [ref=e635]
+            - link "Discord" [ref=e638] [cursor=pointer]:
+              - /url: https://discord.gg/JRBar2vA5N
+              - img [ref=e639]
+        - generic [ref=e643]:
+          - generic [ref=e644]: Monitoring.
+          - list [ref=e645]:
+            - listitem [ref=e646]:
+              - link "Website & endpoint monitoring" [ref=e647] [cursor=pointer]:
+                - /url: https://uptimerobot.com/website-monitoring/?ref=footer
+            - listitem [ref=e648]:
+              - link "Keyword monitoring" [ref=e649] [cursor=pointer]:
+                - /url: https://uptimerobot.com/keyword-monitoring/?ref=footer
+            - listitem [ref=e650]:
+              - link "Ping monitoring" [ref=e651] [cursor=pointer]:
+                - /url: https://uptimerobot.com/ping-monitoring/?ref=footer
+            - listitem [ref=e652]:
+              - link "Port monitoring" [ref=e653] [cursor=pointer]:
+                - /url: https://uptimerobot.com/port-monitoring/?ref=footer
+            - listitem [ref=e654]:
+              - link "Cron job monitoring" [ref=e655] [cursor=pointer]:
+                - /url: https://uptimerobot.com/cron-job-monitoring/?ref=footer
+            - listitem [ref=e656]:
+              - link "Status pages" [ref=e657] [cursor=pointer]:
+                - /url: https://uptimerobot.com/status-page/?ref=footer
+            - listitem [ref=e658]:
+              - link "Incident management" [ref=e659] [cursor=pointer]:
+                - /url: https://uptimerobot.com/incident-management/?ref=footer
+            - listitem [ref=e660]:
+              - link "API monitoring" [ref=e661] [cursor=pointer]:
+                - /url: https://uptimerobot.com/api-monitoring/?ref=footer
+        - generic [ref=e662]:
+          - generic [ref=e663]: Product.
+          - list [ref=e664]:
+            - listitem [ref=e665]:
+              - link "Integrations" [ref=e666] [cursor=pointer]:
+                - /url: https://uptimerobot.com/integrations/?ref=footer
+            - listitem [ref=e667]:
+              - link "API" [ref=e668] [cursor=pointer]:
+                - /url: https://uptimerobot.com/api/?ref=footer
+            - listitem [ref=e669]:
+              - link "MCP" [ref=e670] [cursor=pointer]:
+                - /url: https://uptimerobot.com/mcp/?ref=footer
+            - listitem [ref=e671]:
+              - link "Roadmap" [ref=e672] [cursor=pointer]:
+                - /url: https://uptimerobot.com/roadmap/?ref=footer
+            - listitem [ref=e673]:
+              - link "Status" [ref=e674] [cursor=pointer]:
+                - /url: https://uptimerobot.com/status-page/?ref=footer
+            - listitem [ref=e675]:
+              - link "Is it down?" [ref=e676] [cursor=pointer]:
+                - /url: https://uptimerobot.com/is-it-down/?ref=footer
+        - generic [ref=e677]:
+          - generic [ref=e678]: Company.
+          - list [ref=e679]:
+            - listitem [ref=e680]:
+              - link "Contact us" [ref=e681] [cursor=pointer]:
+                - /url: https://uptimerobot.com/contact/?ref=footer
+            - listitem [ref=e682]:
+              - link "Affiliate program" [ref=e683] [cursor=pointer]:
+                - /url: https://uptimerobot.com/affiliate/?ref=footer
+            - listitem [ref=e684]:
+              - link "Clients" [ref=e685] [cursor=pointer]:
+                - /url: https://uptimerobot.com/customers/?ref=footer
+            - listitem [ref=e686]:
+              - link "Non profits" [ref=e687] [cursor=pointer]:
+                - /url: https://uptimerobot.com/sponsorship/?ref=footer
+            - listitem [ref=e688]:
+              - link "Terms" [ref=e689] [cursor=pointer]:
+                - /url: https://uptimerobot.com/terms/?ref=footer
+              - text: /
+              - link "Privacy" [ref=e690] [cursor=pointer]:
+                - /url: https://uptimerobot.com/privacy/?ref=footer
+              - text: /
+              - link "DPA" [ref=e691] [cursor=pointer]:
+                - /url: https://uptimerobot.com/dpa/?ref=footer
+            - listitem [ref=e692]:
+              - link "Security & compliance" [ref=e693] [cursor=pointer]:
+                - /url: https://uptimerobot.com/security/?ref=footer
+      - generic [ref=e694]:
+        - generic [ref=e695]:
+          - generic [ref=e696]: Features.
+          - list [ref=e697]:
+            - listitem [ref=e698]:
+              - link "Multi-location monitoring" [ref=e699] [cursor=pointer]:
+                - /url: https://uptimerobot.com/location-specific-monitoring/?ref=footer
+            - listitem [ref=e700]:
+              - link "Response time monitoring" [ref=e701] [cursor=pointer]:
+                - /url: https://uptimerobot.com/response-time-monitoring/?ref=footer
+            - listitem [ref=e702]:
+              - link "SSL monitoring" [ref=e703] [cursor=pointer]:
+                - /url: https://uptimerobot.com/ssl-monitoring/?ref=footer
+            - listitem [ref=e704]:
+              - link "Domain monitoring" [ref=e705] [cursor=pointer]:
+                - /url: https://uptimerobot.com/domain-expiration-monitoring/?ref=footer
+            - listitem [ref=e706]:
+              - link "DNS monitoring" [ref=e707] [cursor=pointer]:
+                - /url: https://uptimerobot.com/dns-monitoring/?ref=footer
+        - generic [ref=e708]:
+          - generic [ref=e709]: Comparison.
+          - list [ref=e710]:
+            - listitem [ref=e711]:
+              - link "vs. Statuspage" [ref=e712] [cursor=pointer]:
+                - /url: https://uptimerobot.com/alternative-to-atlassian-status/?ref=footer
+            - listitem [ref=e713]:
+              - link "vs. BetterStack" [ref=e714] [cursor=pointer]:
+                - /url: https://uptimerobot.com/alternative-to-betterstack/?ref=footer
+            - listitem [ref=e715]:
+              - link "vs. Site24×7" [ref=e716] [cursor=pointer]:
+                - /url: https://uptimerobot.com/alternative-to-site24x7/?ref=footer
+            - listitem [ref=e717]:
+              - link "vs. Pingdom" [ref=e718] [cursor=pointer]:
+                - /url: https://uptimerobot.com/alternative-to-pingdom/?ref=footer
+            - listitem [ref=e719]:
+              - link "vs. Uptime.com" [ref=e720] [cursor=pointer]:
+                - /url: https://uptimerobot.com/alternative-to-uptime/?ref=footer
+        - generic [ref=e721]:
+          - generic [ref=e722]: Resources.
+          - list [ref=e723]:
+            - listitem [ref=e724]:
+              - link "Help center" [ref=e725] [cursor=pointer]:
+                - /url: https://uptimerobot.com/help/?ref=footer
+            - listitem [ref=e726]:
+              - link "FAQs" [ref=e727] [cursor=pointer]:
+                - /url: https://uptimerobot.com/faq/?ref=footer
+            - listitem [ref=e728]:
+              - link "Locations & IPs" [ref=e729] [cursor=pointer]:
+                - /url: https://uptimerobot.com/help/locations/?ref=footer
+            - listitem [ref=e730]:
+              - link "Blog" [ref=e731] [cursor=pointer]:
+                - /url: https://uptimerobot.com/blog/?ref=footer
+            - listitem [ref=e732]:
+              - link "Knowledge hub" [ref=e733] [cursor=pointer]:
+                - /url: https://uptimerobot.com/knowledge-hub/?ref=footer
+        - generic [ref=e734]:
+          - generic [ref=e735]: Free tools.
+          - list [ref=e736]:
+            - listitem [ref=e737]:
+              - link "Subnet calculator" [ref=e738] [cursor=pointer]:
+                - /url: https://uptimerobot.com/free-tools/ip-subnet-calculator/?ref=footer
+            - listitem [ref=e739]:
+              - link "MX lookup" [ref=e740] [cursor=pointer]:
+                - /url: https://uptimerobot.com/free-tools/mx-lookup/?ref=footer
+            - listitem [ref=e741]:
+              - link "Uptime calculator" [ref=e742] [cursor=pointer]:
+                - /url: https://uptimerobot.com/free-tools/uptime-downtime-calculator/?ref=footer
+            - listitem [ref=e743]:
+              - link "CrontabRobot" [ref=e744] [cursor=pointer]:
+                - /url: https://uptimerobot.com/free-tools/cron-expression-generator/?ref=footer
+            - listitem [ref=e745]:
+              - link "Web change detection" [ref=e746] [cursor=pointer]:
+                - /url: https://uptimerobot.com/free-tools/website-change-detection-tool/?ref=footer
+  - dialog "Cookie consent" [ref=e749]:
+    - generic [ref=e750]:
+      - paragraph [ref=e751]:
+        - text: 🍪 This website uses cookies.
+        - link "Learn more" [ref=e752] [cursor=pointer]:
+          - /url: https://uptimerobot.com/privacy
+      - generic [ref=e753]:
+        - button "Decline all" [ref=e754] [cursor=pointer]
+        - generic [ref=e755]: "|"
+        - button "Allow essential" [ref=e756] [cursor=pointer]
+        - generic [ref=e757]: "|"
+        - button "Accept all" [ref=e758] [cursor=pointer]

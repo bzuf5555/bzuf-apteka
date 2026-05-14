@@ -1,0 +1,44 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - link "UptimeRobot logo" [ref=e3] [cursor=pointer]:
+      - /url: https://uptimerobot.com
+      - img "UptimeRobot logo" [ref=e4]
+    - generic [ref=e8]:
+      - heading "Register your FREE account." [level=2] [ref=e9]
+      - generic [ref=e10]:
+        - button "Register with Google" [ref=e11] [cursor=pointer]:
+          - img [ref=e13]
+          - text: Register with Google
+        - button "Register with GitHub" [ref=e15] [cursor=pointer]:
+          - img [ref=e17]
+          - text: Register with GitHub
+        - group "or" [ref=e19]:
+          - separator [ref=e20]
+          - generic [ref=e21]: or
+          - separator [ref=e22]
+        - generic [ref=e24]:
+          - group [ref=e25]:
+            - generic [ref=e28]: Your e-mail
+            - textbox "Your e-mail" [active] [ref=e31]:
+              - /placeholder: E.g. info@example.com
+          - button "Register with email" [disabled] [ref=e32]:
+            - img [ref=e34]
+            - text: Register with email
+    - contentinfo [ref=e37]:
+      - link "Already have an account?" [ref=e38] [cursor=pointer]:
+        - /url: /login
+      - paragraph [ref=e39]:
+        - text: By creating account you agree to our
+        - link "Terms & Conditions" [ref=e40] [cursor=pointer]:
+          - /url: https://uptimerobot.com/terms/
+        - text: and
+        - link "Privacy Policy" [ref=e41] [cursor=pointer]:
+          - /url: https://uptimerobot.com/privacy/
+  - alert [ref=e42]
+  - generic:
+    - region "Notifications-top"
+    - region "Notifications-top-left"
+    - region "Notifications-top-right"
+    - region "Notifications-bottom-left"
+    - region "Notifications-bottom"
+    - region "Notifications-bottom-right"

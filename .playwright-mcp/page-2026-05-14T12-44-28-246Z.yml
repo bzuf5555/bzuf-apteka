@@ -1,0 +1,33 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - img "UptimeRobot logo" [ref=e7]
+      - paragraph [ref=e14]: Step 2 of 4
+    - generic [ref=e68]:
+      - heading "Test notifications." [level=2] [ref=e69]
+      - paragraph [ref=e70]: UptimeRobot will send you an e-mail whenever your website goes down.
+      - generic [ref=e71]:
+        - paragraph [ref=e72]: Your e-mail
+        - paragraph [ref=e73]: bzuf5555@gmail.com
+        - paragraph [ref=e74]: You can invite your team members later on.
+      - button "Send test e-mail notification" [ref=e75] [cursor=pointer]
+      - paragraph [ref=e76]: 💡 We can also call, send you an SMS or you can connect your Slack, MS Teams or any service you already use with UptimeRobot.
+    - button "Skip" [ref=e78] [cursor=pointer]
+  - alert [ref=e61]: Welcome to UptimeRobot
+  - generic:
+    - region "Notifications-top"
+    - region "Notifications-top-left"
+    - region "Notifications-top-right":
+      - status [ref=e79]:
+        - generic [ref=e80]:
+          - img [ref=e82]
+          - generic [ref=e85]: Monitor created!
+    - region "Notifications-bottom-left"
+    - region "Notifications-bottom"
+    - region "Notifications-bottom-right"
+  - iframe [ref=e62]:
+    
+  - button "Open Intercom Messenger" [ref=e63] [cursor=pointer]:
+    - img [ref=e65]
+    - generic:
+      - img

@@ -3,30 +3,48 @@
 ## IN_PROGRESS
 _(hozircha yo'q)_
 
-## PENDING
+## PENDING — Ustuvorlik bo'yicha
 
-### Ishga tushirish (lokal test)
-- [x] `.env` faylini yaratish — yaratildi
-- [x] `pip install -r requirements.txt` — muvaffaqiyatli (Python 3.11 venv)
-- [x] Kod sintaksis tekshiruvi — 24 fayl, xato yo'q
-- [ ] `.env` ga BOT_TOKEN va MONGODB_URI kiritish (foydalanuvchi)
-- [ ] `python scripts/seed_data.py` — demo ma'lumot qo'shish
-- [ ] `python -m bot.main` — botni ishga tushirish va test qilish
+### 🔴 Yuqori (Tezda qo'shish kerak)
 
-### Render Deploy
-- [ ] GitHub repo yaratish va loyihani push qilish
-- [ ] https://render.com → New Web Service → GitHub repo ulash
-- [ ] Environment variables qo'shish:
-  - `BOT_TOKEN`, `MONGODB_URI`, `ANTHROPIC_API_KEY`
-  - `WEBHOOK_HOST` = `https://your-app.onrender.com`
-  - `WEBHOOK_SECRET` = tasodifiy string
-  - `BOT_ENV` = `production`
-- [ ] Deploy tugagandan keyin webhook URL ni tekshirish:
-  `https://api.telegram.org/bot<TOKEN>/getWebhookInfo`
+- [ ] **"Hozir ochiq" filtr**
+      Dorixona hozir ochiqmi yopiqmi — Toshkent vaqti (UTC+5) asosida.
+      Yopiq dorixonalar ro'yxatdan chiqarilsin yoki "Yopiq" belgisi qo'yilsin.
+      Foydalanuvchi befoyda jo'namasin.
 
-### Kelajak (Phase 7)
-- [ ] Dorixona admin panel (inventar yangilash uchun)
-- [ ] Ko'p til (rus tili qo'shish)
-- [ ] Dori narxi o'zgarganda ogohlantirish
-- [ ] UptimeRobot bilan Render free tier uyg'otib turish (ping /health)
-- [ ] Supabase geo yoki Atlas Search (full-text qidiruv)
+- [ ] **Generic muqobil (Arzon analog)**
+      "Sumamed 150,000 so'm" qidirilganda → "Azithromycin 35,000 so'm ham bor!" ko'rsatish.
+      Bir xil `generic_name` ga ega dorilar orasida eng arzonini tavsiya qilish.
+      O'zbekistonda narqni 3–10x kamaytirishi mumkin — eng muhim funksiya.
+
+- [ ] **Alomat bilan qidirish (Symptom search)**
+      Foydalanuvchi: "Boshim og'riyapti" → Claude tavsiya → dorixona ro'yxati.
+      Ko'pchilik dori nomini bilmaydi, alomat biladi.
+
+### 🟡 O'rta
+
+- [ ] **"Mening dorilarim" — /my_medicines**
+      Surunkali kasallar (Metformin, Bisoprolol, Enalapril) uchun saqlangan ro'yxat.
+      Har oy bir xil dorini bir bosish bilan qidiradi.
+
+- [ ] **Dori eslatma**
+      "Metforminni 08:00 va 20:00 da iching" — bot eslatib turadi.
+      Surunkali kasallikda dori vaqtida ichilishi muhim.
+
+- [ ] **Dorixona reytingi**
+      Foydalanuvchi dorixonaga borganidan keyin 1–5 yulduz qo'yadi.
+      Yolg'on narq ko'rsatgan dorixona past reyting oladi — bozorni tozalaydi.
+
+- [ ] **Dorixona admin paneli**
+      Har bir dorixona o'z kodi bilan kiradi → narxni o'zi yangilaydi.
+      Bu bo'lgandan keyin narxlar 100% real bo'ladi.
+
+### 🟢 Kelajak
+
+- [ ] Ko'p til — Ruscha interfeys
+- [ ] 25 ta rasmsiz dori uchun rasm topish
+- [ ] Narq tarixi grafigi
+- [ ] Foydalanuvchi qidiruv tarixi
+
+
+

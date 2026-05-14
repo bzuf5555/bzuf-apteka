@@ -1,0 +1,59 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link [ref=e7] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - link [ref=e13] [cursor=pointer]:
+              - /url: /monitors
+              - img [ref=e15]
+            - link [ref=e22] [cursor=pointer]:
+              - /url: /incidents
+              - img [ref=e24]
+            - link [ref=e29] [cursor=pointer]:
+              - /url: /status
+              - img [ref=e31]
+            - link [ref=e38] [cursor=pointer]:
+              - /url: /maintenance
+              - img [ref=e40]
+            - link [ref=e43] [cursor=pointer]:
+              - /url: /team
+              - img [ref=e45]
+            - link [ref=e50] [cursor=pointer]:
+              - /url: /integrations
+              - img [ref=e52]
+          - img "bzuf" [ref=e63] [cursor=pointer]: b.
+        - button [ref=e65] [cursor=pointer]:
+          - img [ref=e66]
+    - main [ref=e68]:
+      - generic [ref=e70]:
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - heading "Monitors." [level=2] [ref=e74]
+            - group [ref=e75]:
+              - link "New" [ref=e76] [cursor=pointer]:
+                - /url: /monitors/new/http
+                - img [ref=e78]
+                - text: New
+              - button "Options" [ref=e82] [cursor=pointer]:
+                - img [ref=e83]
+          - generic [ref=e85]:
+            - generic [ref=e87] [cursor=pointer]:
+              - img [ref=e88]
+              - generic [ref=e91]: Show groups
+            - textbox "Search name, URL or tag..." [ref=e93]
+        - complementary [ref=e123]:
+          - generic [ref=e126]:
+            - paragraph [ref=e127]: Last 24 hours.
+            - button [ref=e128] [cursor=pointer]:
+              - img [ref=e129]
+  - alert [ref=e133]
+  - generic:
+    - region "Notifications-top"
+    - region "Notifications-top-left"
+    - region "Notifications-top-right"
+    - region "Notifications-bottom-left"
+    - region "Notifications-bottom"
+    - region "Notifications-bottom-right"
