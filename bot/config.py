@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     BOT_TOKEN: str
     ADMIN_IDS: str = ""
-    ANTHROPIC_API_KEY: str = ""
+    GROQ_API_KEY: str = ""
 
     MONGODB_URI: str = "mongodb://localhost:27017"
     MONGODB_DB_NAME: str = "dorixona"
