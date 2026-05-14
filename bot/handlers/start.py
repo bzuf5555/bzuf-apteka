@@ -4,7 +4,7 @@ from aiogram.types import Message
 from loguru import logger
 
 from bot.database import queries
-from bot.keyboards.reply import contact_request_kb, location_request_kb, main_menu_kb
+from bot.keyboards.reply import contact_request_kb, location_request_kb
 
 router = Router()
 
@@ -29,10 +29,9 @@ _STEP2_LOCATION = """✅ <b>Telefon raqamingiz saqlandi!</b>
 
 <i>Bot sizga yaqin dorixonalarni topadi.</i>"""
 
-_WELCOME_BACK = """👋 Xush kelibsiz, <b>{name}</b>!
+_LOCATION_REFRESH = """👋 Xush kelibsiz, <b>{name}</b>!
 
-🔍 Qaysi dorini qidiryapsiz?
-Dori nomini yozing yoki menyu tugmasini bosing."""
+📍 Joylashuvingizni yuboring — bot atrofingizdagi dorixonalarni topadi 👇"""
 
 _HELP_TEXT = """ℹ️ <b>Yordam</b>
 
@@ -63,16 +62,13 @@ async def cmd_start(message: Message) -> None:
     )
 
     has_contact = await queries.user_has_contact(user.id)
-    has_location = await queries.user_has_location(user.id)
 
-    if has_contact and has_location:
+    if has_contact:
         await message.answer(
-            _WELCOME_BACK.format(name=user.first_name),
-            reply_markup=main_menu_kb(),
+            _LOCATION_REFRESH.format(name=user.first_name),
+            reply_markup=location_request_kb(),
             parse_mode="HTML",
         )
-    elif has_contact:
-        await message.answer(_STEP2_LOCATION, reply_markup=location_request_kb(), parse_mode="HTML")
     else:
         await message.answer(
             _STEP1_CONTACT.format(name=user.first_name),
@@ -80,7 +76,7 @@ async def cmd_start(message: Message) -> None:
             parse_mode="HTML",
         )
 
-    logger.info(f"/start: {user.id} contact={has_contact} location={has_location}")
+    logger.info(f"/start: {user.id} contact={has_contact}")
 
 
 @router.message(Command("help"))
