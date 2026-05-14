@@ -117,7 +117,14 @@ async def run_webhook() -> None:
 
     port = int(os.getenv("PORT", 8000))
     logger.info(f"Webhook server port {port} da ishga tushmoqda")
-    web.run_app(app, host="0.0.0.0", port=port)
+
+    runner = web.AppRunner(app)
+    await runner.setup()
+    site = web.TCPSite(runner, host="0.0.0.0", port=port)
+    await site.start()
+    logger.success(f"Server {port} portda ishlamoqda")
+
+    await asyncio.Event().wait()
 
 
 # ── Main ───────────────────────────────────────────────────────────────────
