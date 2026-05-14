@@ -15,7 +15,8 @@ from aiogram.client.default import DefaultBotProperties
 from bot.config import settings
 from bot.database.connection import get_db, close_db
 from bot.database.models import create_indexes
-from bot.handlers import start, contact, location, search, admin
+from bot.handlers import start, contact, location, search, admin, price_watch
+from bot.services.price_watch_service import price_watch_loop
 
 
 def setup_logging() -> None:
@@ -34,6 +35,7 @@ def setup_logging() -> None:
 def build_dispatcher() -> Dispatcher:
     dp = Dispatcher()
     dp.include_router(start.router)
+    dp.include_router(price_watch.router)
     dp.include_router(contact.router)
     dp.include_router(location.router)
     dp.include_router(search.router)
@@ -58,6 +60,7 @@ async def run_polling() -> None:
 
     async def on_startup(bot: Bot) -> None:
         await _init_db()
+        asyncio.create_task(price_watch_loop(bot))
         me = await bot.get_me()
         logger.success(f"Polling: @{me.username}")
 
@@ -89,6 +92,7 @@ async def run_webhook() -> None:
             secret_token=settings.WEBHOOK_SECRET,
             drop_pending_updates=True,
         )
+        asyncio.create_task(price_watch_loop(bot))
         me = await bot.get_me()
         logger.success(f"Webhook: @{me.username} → {settings.webhook_url}")
 

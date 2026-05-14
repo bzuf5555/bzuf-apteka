@@ -5,7 +5,7 @@ from loguru import logger
 from bot.database import queries
 from bot.services import search_service
 from bot.keyboards.reply import location_request_kb, main_menu_kb
-from bot.keyboards.inline import search_again_kb
+from bot.keyboards.inline import search_again_kb, search_with_watch_kb
 
 router = Router()
 
@@ -66,7 +66,7 @@ async def handle_medicine_query(message: Message) -> None:
         )
         await searching_msg.delete()
 
-        # Rasm mavjud bo'lsa — avval yuboramiz (foydalanuvchi dorini taniydi)
+        # Rasm mavjud bo'lsa — avval yuboramiz
         if result.get("image_url"):
             try:
                 from aiogram.types import URLInputFile
@@ -78,7 +78,14 @@ async def handle_medicine_query(message: Message) -> None:
             except Exception as img_err:
                 logger.warning(f"Rasm yuborib bo'lmadi: {img_err}")
 
-        await message.answer(result["text"], parse_mode="HTML", reply_markup=search_again_kb())
+        # Narq kuzatuvi tugmasi (faqat natija topilganda)
+        medicine_id = result.get("medicine_id")
+        if result.get("found") and medicine_id:
+            kb = search_with_watch_kb(medicine_id)
+        else:
+            kb = search_again_kb()
+
+        await message.answer(result["text"], parse_mode="HTML", reply_markup=kb)
     except Exception as e:
         logger.error(f"Qidiruv xatosi [{user.id}]: {e}")
         await searching_msg.delete()

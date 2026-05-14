@@ -8,6 +8,7 @@ MEDICINES = "medicines"
 PHARMACIES = "pharmacies"
 INVENTORY = "inventory"
 SEARCH_LOG = "search_log"
+PRICE_WATCHES = "price_watches"
 
 
 async def create_indexes(db) -> None:
@@ -32,3 +33,6 @@ async def create_indexes(db) -> None:
 
     await db[SEARCH_LOG].create_index("telegram_id")
     await db[SEARCH_LOG].create_index("searched_at")
+
+    await db[PRICE_WATCHES].create_index([("telegram_id", ASCENDING), ("medicine_id", ASCENDING)], unique=True)
+    await db[PRICE_WATCHES].create_index("is_active")

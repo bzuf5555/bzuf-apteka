@@ -60,6 +60,7 @@ async def search_medicine(
 
     medicine = medicines[0]
     image_url = medicine.get("image_url")
+    medicine_id = str(medicine["_id"])
 
     pharmacies = await queries.find_nearby_pharmacies_with_medicine(
         medicine_id=medicine["_id"],
@@ -76,6 +77,7 @@ async def search_medicine(
         "text": text,
         "image_url": image_url,
         "display_name": display_name,
+        "medicine_id": medicine_id,
         "found": True,
     }
 

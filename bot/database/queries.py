@@ -80,6 +80,11 @@ async def search_medicines_by_name(query: str) -> list[dict]:
     return await cursor.to_list(10)
 
 
+async def get_medicine_by_id(medicine_id) -> dict | None:
+    db = await get_db()
+    return await db[MEDICINES].find_one({"_id": medicine_id}, {"_id": 0, "name_uz": 1, "name_ru": 1})
+
+
 # ── Pharmacies + Geo ───────────────────────────────────────────────────────
 
 async def find_nearby_pharmacies_with_medicine(
@@ -159,6 +164,87 @@ async def log_search(telegram_id: int, query: str, results_count: int) -> None:
         "results_count": results_count,
         "searched_at": _now(),
     })
+
+
+# ── Price Watches ──────────────────────────────────────────────────────────
+
+async def subscribe_price_watch(
+    telegram_id: int,
+    medicine_id,
+    medicine_name: str,
+    user_lat: float,
+    user_lng: float,
+    current_min_price: float,
+) -> bool:
+    """
+    Foydalanuvchini dori narqi kuzatuviga qo'shadi.
+    Returns: True — yangi, False — allaqachon obuna
+    """
+    from .models import PRICE_WATCHES
+    db = await get_db()
+    existing = await db[PRICE_WATCHES].find_one({
+        "telegram_id": telegram_id,
+        "medicine_id": medicine_id,
+    })
+    if existing:
+        if not existing.get("is_active"):
+            await db[PRICE_WATCHES].update_one(
+                {"_id": existing["_id"]},
+                {"$set": {"is_active": True, "min_price": current_min_price, "updated_at": _now()}},
+            )
+            return True
+        return False
+
+    await db[PRICE_WATCHES].insert_one({
+        "telegram_id": telegram_id,
+        "medicine_id": medicine_id,
+        "medicine_name": medicine_name,
+        "user_lat": user_lat,
+        "user_lng": user_lng,
+        "min_price": current_min_price,
+        "subscribed_at": _now(),
+        "last_checked_at": _now(),
+        "is_active": True,
+    })
+    return True
+
+
+async def unsubscribe_price_watch(telegram_id: int, medicine_id) -> None:
+    from .models import PRICE_WATCHES
+    db = await get_db()
+    await db[PRICE_WATCHES].update_one(
+        {"telegram_id": telegram_id, "medicine_id": medicine_id},
+        {"$set": {"is_active": False}},
+    )
+
+
+async def get_active_watches() -> list[dict]:
+    from .models import PRICE_WATCHES
+    db = await get_db()
+    cursor = db[PRICE_WATCHES].find({"is_active": True})
+    return await cursor.to_list(None)
+
+
+async def update_watch_price(watch_id, new_min_price: float) -> None:
+    from .models import PRICE_WATCHES
+    db = await get_db()
+    await db[PRICE_WATCHES].update_one(
+        {"_id": watch_id},
+        {"$set": {"min_price": new_min_price, "last_checked_at": _now()}},
+    )
+
+
+async def get_current_min_price(medicine_id, user_lat: float, user_lng: float, radius_km: float = 5.0) -> float | None:
+    """Foydalanuvchi atrofida dorining eng arzon narxini qaytaradi."""
+    pharmacies = await find_nearby_pharmacies_with_medicine(
+        medicine_id=medicine_id,
+        user_lat=user_lat,
+        user_lng=user_lng,
+        radius_km=radius_km,
+    )
+    if not pharmacies:
+        return None
+    return min(p["price"] for p in pharmacies)
 
 
 # ── Admin stats ────────────────────────────────────────────────────────────
